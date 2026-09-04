@@ -31,10 +31,10 @@ const getTransition = (duration: number, from: number) => ({
 
 const CircularText: React.FC<CircularTextProps> = ({
   text,
-  spinDuration = 20,
+  spinDuration = 24,
   onHover = 'speedUp',
   className = '',
-  fontSize = '20px'
+  fontSize = '31px'
 }) => {
   const letters = Array.from(text);
   const controls = useAnimation();
@@ -109,19 +109,16 @@ const CircularText: React.FC<CircularTextProps> = ({
     >
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
-        const factor = Math.PI / letters.length;
-        const x = factor * i;
-        const y = factor * i;
-        const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
+        const transform = `rotateZ(${rotationDeg}deg)`;
 
         return (
           <span key={i} style={{ transform, WebkitTransform: transform }}>
             {letter === '+' ? (
-              <span className="text-white font-black text-2xl sm:text-3xl inline-block -translate-y-0.5 leading-none">
+              <span className="text-white font-black text-3xl sm:text-4xl inline-block -translate-y-0.5 leading-none drop-shadow-sm">
                 +
               </span>
             ) : (
-              letter
+              <span className="font-black drop-shadow-xs">{letter}</span>
             )}
           </span>
         );
