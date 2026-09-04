@@ -23,139 +23,119 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
           </h2>
         </div>
 
-        {/* 4 Pillars Grid — 4 cards in 1 line on desktop with image backgrounds and all white text */}
+        {/* 4 Pillars Grid — 4 cards in 1 line on desktop with image backgrounds and all black text aligned to left-bottom */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           
           {/* Card 1 — AI Voice Scheduling */}
-          <div className="relative rounded-2xl overflow-hidden p-5 sm:p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] group border border-border-soft/40">
+          <div className="relative bg-white rounded-2xl overflow-hidden p-6 sm:p-7 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end items-start text-left min-h-[280px] sm:min-h-[300px] group border border-border-soft">
             <img
               src={bgVoice}
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 z-0 pointer-events-none" />
 
-            <div className="relative z-10">
-              <div className="mb-3">
-                <span className="text-xs font-bold font-heading text-white/90 uppercase tracking-wider">
-                  AI VOICE SCHEDULING
-                </span>
-              </div>
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 mt-auto">
+              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+                AI VOICE SCHEDULING
+              </span>
 
               {/* Big Stat Anchor — 24/7 */}
-              <div className="mb-3">
-                <BigStatDisplay staticText="24/7" textColor="white" />
-              </div>
-            </div>
+              <BigStatDisplay staticText="24/7" textColor="black" />
 
-            {/* Supporting one-line plain-English description */}
-            <p className="relative z-10 text-sm text-white font-medium leading-relaxed mt-2 drop-shadow-xs">
-              Every call, answered in 1 ring.
-            </p>
+              {/* Supporting one-line plain-English description */}
+              <p className="text-sm text-black font-medium leading-relaxed">
+                Every call, answered in 1 ring.
+              </p>
+            </div>
           </div>
 
           {/* Card 2 — Automated Reminders */}
-          <div className="relative rounded-2xl overflow-hidden p-5 sm:p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] group border border-border-soft/40">
+          <div className="relative bg-white rounded-2xl overflow-hidden p-6 sm:p-7 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end items-start text-left min-h-[280px] sm:min-h-[300px] group border border-border-soft">
             <img
               src={bgReminders}
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 z-0 pointer-events-none" />
 
-            <div className="relative z-10">
-              <div className="mb-3">
-                <span className="text-xs font-bold font-heading text-white/90 uppercase tracking-wider">
-                  AUTOMATED REMINDERS
-                </span>
-              </div>
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 mt-auto">
+              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+                AUTOMATED REMINDERS
+              </span>
 
               {/* Big Stat Display — 15% → 5% */}
-              <div className="mb-3">
-                <BigStatDisplay
-                  before="15%"
-                  target={5}
-                  suffix="%"
-                  textColor="white"
-                />
-              </div>
-            </div>
+              <BigStatDisplay
+                before="15%"
+                target={5}
+                suffix="%"
+                textColor="black"
+              />
 
-            {/* Supporting one-line plain-English description */}
-            <p className="relative z-10 text-sm text-white font-medium leading-relaxed mt-2 drop-shadow-xs">
-              Automated reminders patients actually respond to.
-            </p>
+              {/* Supporting one-line plain-English description */}
+              <p className="text-sm text-black font-medium leading-relaxed">
+                Automated reminders patients actually respond to.
+              </p>
+            </div>
           </div>
 
           {/* Card 3 — Kiosk Check-In & Copay */}
-          <div className="relative rounded-2xl overflow-hidden p-5 sm:p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] group border border-border-soft/40">
+          <div className="relative bg-white rounded-2xl overflow-hidden p-6 sm:p-7 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end items-start text-left min-h-[280px] sm:min-h-[300px] group border border-border-soft">
             <img
               src={bgKiosk}
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 z-0 pointer-events-none" />
 
-            <div className="relative z-10">
-              <div className="mb-3">
-                <span className="text-xs font-bold font-heading text-white/90 uppercase tracking-wider">
-                  KIOSK CHECK-IN & COPAY
-                </span>
-              </div>
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 mt-auto">
+              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+                KIOSK CHECK-IN & COPAY
+              </span>
 
               {/* Big Stat Display — 60% → 95% */}
-              <div className="mb-3">
-                <BigStatDisplay
-                  before="60%"
-                  target={95}
-                  suffix="%"
-                  textColor="white"
-                />
-              </div>
-            </div>
+              <BigStatDisplay
+                before="60%"
+                target={95}
+                suffix="%"
+                textColor="black"
+              />
 
-            {/* Supporting one-line plain-English description */}
-            <p className="relative z-10 text-sm text-white font-medium leading-relaxed mt-2 drop-shadow-xs">
-              Copay collected before the patient sees the provider.
-            </p>
+              {/* Supporting one-line plain-English description */}
+              <p className="text-sm text-black font-medium leading-relaxed">
+                Copay collected before the patient sees the provider.
+              </p>
+            </div>
           </div>
 
           {/* Card 4 — AI Claims Prep */}
-          <div className="relative rounded-2xl overflow-hidden p-5 sm:p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] group border border-border-soft/40">
+          <div className="relative bg-white rounded-2xl overflow-hidden p-6 sm:p-7 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end items-start text-left min-h-[280px] sm:min-h-[300px] group border border-border-soft">
             <img
               src={bgClaims}
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 z-0 pointer-events-none" />
 
-            <div className="relative z-10">
-              <div className="mb-3">
-                <span className="text-xs font-bold font-heading text-white/90 uppercase tracking-wider">
-                  AI CLAIMS PREP
-                </span>
-              </div>
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 mt-auto">
+              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+                AI CLAIMS PREP
+              </span>
 
               {/* Big Stat Display — 60–90d → ~25d */}
-              <div className="mb-3">
-                <BigStatDisplay
-                  before="60–90d"
-                  target={25}
-                  prefix="~"
-                  suffix="d"
-                  textColor="white"
-                />
-              </div>
-            </div>
+              <BigStatDisplay
+                before="60–90d"
+                target={25}
+                prefix="~"
+                suffix="d"
+                textColor="black"
+              />
 
-            {/* Supporting one-line plain-English description */}
-            <p className="relative z-10 text-sm text-white font-medium leading-relaxed mt-2 drop-shadow-xs">
-              Claims staged and ready before the visit ends.
-            </p>
+              {/* Supporting one-line plain-English description */}
+              <p className="text-sm text-black font-medium leading-relaxed">
+                Claims staged and ready before the visit ends.
+              </p>
+            </div>
           </div>
 
         </div>

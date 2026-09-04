@@ -11,7 +11,7 @@ export interface BigStatDisplayProps {
   tag?: string;
   tagPlacement?: 'beside' | 'below';
   tagVariant?: 'emerald' | 'blue';
-  textColor?: 'blue' | 'white';
+  textColor?: 'blue' | 'white' | 'black';
 }
 
 export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
@@ -25,7 +25,7 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
   tag,
   tagPlacement = 'below',
   tagVariant = 'emerald',
-  textColor = 'white',
+  textColor = 'black',
 }) => {
   const [value, setValue] = useState(target !== undefined ? from : 0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -87,18 +87,28 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
       <div className="flex items-center gap-3 flex-wrap">
         {/* If static text like 24/7 */}
         {staticText ? (
-          <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none ${textColor === 'white' ? 'text-white' : 'text-brand-blue'}`}>
+          <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none ${
+            textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-black' : 'text-brand-blue'
+          }`}>
             {staticText}
           </span>
         ) : (
           /* Before and After numbers */
           <div className="flex items-center gap-2.5 sm:gap-3 flex-nowrap">
             {before && (
-              <span className={`text-base sm:text-lg xl:text-xl font-bold line-through select-none whitespace-nowrap ${textColor === 'white' ? 'text-white/70 decoration-white/60' : 'text-text-body/50 decoration-text-body/40'}`}>
+              <span className={`text-base sm:text-lg xl:text-xl font-bold line-through select-none whitespace-nowrap ${
+                textColor === 'white'
+                  ? 'text-white/70 decoration-white/60'
+                  : textColor === 'black'
+                  ? 'text-neutral-400 decoration-neutral-400'
+                  : 'text-text-body/50 decoration-text-body/40'
+              }`}>
                 {before}
               </span>
             )}
-            <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none tabular-nums inline-flex items-baseline whitespace-nowrap ${textColor === 'white' ? 'text-white' : 'text-brand-blue'}`}>
+            <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none tabular-nums inline-flex items-baseline whitespace-nowrap ${
+              textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-black' : 'text-brand-blue'
+            }`}>
               {prefix && <span>{prefix}</span>}
               <span>{value}</span>
               {suffix && <span>{suffix}</span>}
