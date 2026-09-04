@@ -5,10 +5,10 @@ import hipaaBadge from '../assets/hipaa-badge.png';
 import pciDssBadge from '../assets/pci-dss-badge.png';
 
 interface FooterProps {
-  onRequestDemo: () => void;
+  onRequestDemo?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onRequestDemo }) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-surface-white pt-6 pb-12 overflow-hidden">
       {/* Animated ECG Heartbeat Divider Line — Full Bleed edge-to-edge */}
@@ -65,16 +65,6 @@ export const Footer: React.FC<FooterProps> = ({ onRequestDemo }) => {
                 alt="PCI-DSS Validated Level 1"
                 className="h-16 sm:h-18 w-auto object-contain hover:scale-105 transition-transform duration-200 cursor-pointer"
               />
-            </div>
-
-            <div className="pt-2">
-              <button
-                onClick={onRequestDemo}
-                className="py-2 px-4 rounded-xl text-xs font-heading font-bold text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors cursor-pointer inline-flex items-center gap-1.5"
-              >
-                <span>Request a Demo</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
             </div>
           </div>
 
@@ -186,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onRequestDemo }) => {
         </div>
 
         {/* Bottom Copyright Strip */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-body/70">
+        <div className="pt-8 text-center text-xs text-text-body/70">
           <p>
             © 2026 SJ Innovation. All rights reserved. Powered by{' '}
             <span className="font-semibold text-brand-navy">Collab AI</span>.
