@@ -1,14 +1,31 @@
 import React from 'react';
 import LogoLoop from './LogoLoop';
 
+// Import official system SVGs
+import nexhealthLogo from '../assets/systems/nexhealth-dark.svg';
+import ecwLogo from '../assets/systems/EClinicalWorks_idCA4_zeW0_0.svg';
+import sikkaLogo from '../assets/systems/sikka-dark.svg';
+import twilioLogo from '../assets/systems/Twilio logo.svg';
+import stediLogo from '../assets/systems/stedi-dark.svg';
+import stripeLogo from '../assets/systems/svgexport-1 (1).svg';
+import googleCalendarLogo from '../assets/systems/google-calendar-icon.svg';
+import openDentalLogo from '../assets/systems/opendental logo.svg';
+import dentrixLogo from '../assets/systems/Henry_Schein_One_idgM28iBol_1.svg';
+import eaglesoftLogo from '../assets/systems/eaglesoft logo.svg';
+import curveDentalLogo from '../assets/systems/curve-dental-dark.svg';
+import openaiLogo from '../assets/systems/OpenAI_wordmark_2017.svg';
+import elevenlabsLogo from '../assets/systems/svgexport-1 (2).svg';
+import sendgridLogo from '../assets/systems/sendgrid-svgrepo-com.svg';
+import resendLogo from '../assets/systems/resend-wordmark-black.svg';
+
 export const TrustBar: React.FC = () => {
   // Row 1: Core Practice & Infrastructure Integrations (Sliding Left)
   const row1Logos = [
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#0066F5]/10 text-[#0066F5] flex items-center justify-center font-bold text-xs font-heading">
-            NH
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#0066F5]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={nexhealthLogo} alt="NexHealth" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">NexHealth</span>
@@ -20,9 +37,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#00529B]/10 text-[#00529B] flex items-center justify-center font-bold text-xs font-heading">
-            eCW
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#173E58]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={ecwLogo} alt="eClinicalWorks" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">eClinicalWorks</span>
@@ -34,9 +51,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#E65100]/10 text-[#E65100] flex items-center justify-center font-bold text-xs font-heading">
-            Sk
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#681C9A]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={sikkaLogo} alt="Sikka" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Sikka</span>
@@ -48,11 +65,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#F22F46]/10 text-[#F22F46] flex items-center justify-center">
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.2c-3.977 0-7.2-3.223-7.2-7.2s3.223-7.2 7.2-7.2 7.2 3.223 7.2 7.2-3.223 7.2-7.2 7.2z" />
-            </svg>
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#DB132A]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={twilioLogo} alt="Twilio" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Twilio</span>
@@ -64,9 +79,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#4A154B]/10 text-[#4A154B] flex items-center justify-center font-bold text-xs font-heading">
-            St
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#009086]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={stediLogo} alt="Stedi" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Stedi</span>
@@ -78,11 +93,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#635BFF]/10 text-[#635BFF] flex items-center justify-center font-bold text-xs font-heading">
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697.5 12.72.5 7.437.5 3.76 3.195 3.76 7.646c0 5.034 5.372 5.56 8.32 6.643 2.502.915 3.328 1.603 3.328 2.659 0 1.054-.913 1.579-2.316 1.579-2.344 0-5.188-1.056-7.042-2.164L5 22.185c1.88 1.139 4.887 1.815 8.163 1.815 5.586 0 9.387-2.713 9.387-7.25 0-5.228-5.344-5.918-8.574-7.6z" />
-            </svg>
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#635BFF]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={stripeLogo} alt="Stripe" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Stripe</span>
@@ -94,9 +107,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#4285F4]/10 text-[#4285F4] flex items-center justify-center font-bold text-xs font-heading">
-            GC
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#4285F4]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={googleCalendarLogo} alt="Google Calendar" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Google Calendar</span>
@@ -112,9 +125,9 @@ export const TrustBar: React.FC = () => {
   const row2Logos = [
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#1E88E5]/10 text-[#1E88E5] flex items-center justify-center font-bold text-xs font-heading">
-            OD
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#1E88E5]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={openDentalLogo} alt="Open Dental" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Open Dental</span>
@@ -126,9 +139,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#00838F]/10 text-[#00838F] flex items-center justify-center font-bold text-xs font-heading">
-            Dx
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#002E6D]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={dentrixLogo} alt="Dentrix" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Dentrix</span>
@@ -140,9 +153,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#6A1B9A]/10 text-[#6A1B9A] flex items-center justify-center font-bold text-xs font-heading">
-            Es
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#0B1E33]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={eaglesoftLogo} alt="Eaglesoft" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Eaglesoft</span>
@@ -154,9 +167,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#2E7D32]/10 text-[#2E7D32] flex items-center justify-center font-bold text-xs font-heading">
-            CD
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#00838F]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={curveDentalLogo} alt="Curve Dental" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Curve Dental</span>
@@ -168,9 +181,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#10A37F]/10 text-[#10A37F] flex items-center justify-center font-bold text-xs font-heading">
-            AI
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#10A37F]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={openaiLogo} alt="OpenAI" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">OpenAI</span>
@@ -182,9 +195,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#111827]/10 text-[#111827] flex items-center justify-center font-bold text-xs font-heading">
-            11
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#111827]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={elevenlabsLogo} alt="ElevenLabs" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">ElevenLabs</span>
@@ -196,9 +209,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#1A82E2]/10 text-[#1A82E2] flex items-center justify-center font-bold text-xs font-heading">
-            SG
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#1A82E2]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={sendgridLogo} alt="SendGrid" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">SendGrid</span>
@@ -210,9 +223,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-7 h-7 rounded-lg bg-[#000000]/10 text-[#000000] flex items-center justify-center font-bold text-xs font-heading">
-            Re
+        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
+          <div className="w-8 h-8 rounded-lg bg-[#000000]/5 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={resendLogo} alt="Resend" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Resend</span>
@@ -233,14 +246,14 @@ export const TrustBar: React.FC = () => {
       </div>
 
       {/* Row 1 & Row 2 with minimal vertical gap */}
-      <div className="w-full flex flex-col gap-2">
+      <div className="w-full flex flex-col gap-1.5">
         {/* Row 1: Right to Left (direction="left") */}
         <div className="w-full relative">
           <LogoLoop
             logos={row1Logos}
             speed={40}
             direction="left"
-            gap={14}
+            gap={12}
             logoHeight={44}
             pauseOnHover={true}
             fadeOut={true}
@@ -255,7 +268,7 @@ export const TrustBar: React.FC = () => {
             logos={row2Logos}
             speed={38}
             direction="right"
-            gap={14}
+            gap={12}
             logoHeight={44}
             pauseOnHover={true}
             fadeOut={true}
