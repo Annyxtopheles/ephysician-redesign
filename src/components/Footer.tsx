@@ -99,6 +99,11 @@ export const Footer: React.FC<FooterProps> = () => {
                   Platform Comparison
                 </a>
               </li>
+              <li>
+                <a href="#faq" className="text-text-body hover:text-brand-blue transition-colors">
+                  Frequently Asked Questions
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -6,6 +6,7 @@ import { WorkflowPillars } from './components/WorkflowPillars';
 import { BeforeAfterComparison } from './components/BeforeAfterComparison';
 import { WhyPracticesSwitch } from './components/WhyPracticesSwitch';
 import { SecurityCompliance } from './components/SecurityCompliance';
+import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { DemoModal } from './components/DemoModal';
@@ -55,6 +56,9 @@ export function App() {
         <div id="security">
           <SecurityCompliance />
         </div>
+
+        {/* Frequently Asked Questions */}
+        <FAQ />
 
         {/* Final CTA */}
         <FinalCTA onRequestDemo={openDemoModal} />

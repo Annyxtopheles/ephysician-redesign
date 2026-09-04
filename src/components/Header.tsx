@@ -27,6 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestDemo }) => {
     { name: 'Integrations', href: '#integrations' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Compare', href: '#compare' },
+    { name: 'FAQ', href: '#faq' },
   ];
 
   // Smoothly blend from solid white (top) to liquid glass (dashboard & down)
