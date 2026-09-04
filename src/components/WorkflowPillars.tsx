@@ -67,10 +67,13 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                 </span>
               </div>
 
-              <div className="p-2.5 rounded-lg bg-white border border-border-soft text-xs text-text-body">
-                <p className="font-medium text-brand-navy">
+              <div className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-border-soft text-xs gap-2">
+                <p className="font-medium text-brand-navy text-xs leading-snug">
                   &ldquo;Checked live availability with Dr. Patel. Slot booked for Thu 10:00 AM.&rdquo;
                 </p>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-blue text-white shrink-0">
+                  Booked ✓
+                </span>
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-[11px] font-medium text-text-body/80 pt-1.5 border-t border-border-soft/60">
@@ -180,12 +183,12 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-lg bg-brand-teal text-white flex items-center justify-center shrink-0">
-                    <CreditCard className="w-3.5 h-3.5 text-brand-navy" />
+                  <div className="w-6 h-6 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
+                    <CreditCard className="w-3.5 h-3.5" />
                   </div>
                   <span className="font-bold text-brand-navy">Tablet Kiosk Check-In</span>
                 </div>
-                <span className="text-[11px] font-semibold text-brand-blue bg-white px-2 py-0.5 rounded border border-border-soft shrink-0">
+                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 shrink-0">
                   Intake &lt; 2 min
                 </span>
               </div>
@@ -195,7 +198,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                   <span className="text-[10px] text-text-body/60 uppercase block font-semibold">COPAY COLLECTED</span>
                   <span className="font-extrabold text-brand-navy text-xs sm:text-sm">$25.00 via Stripe</span>
                 </div>
-                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 shrink-0">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-blue text-white shrink-0">
                   Paid Before Provider Visit
                 </span>
               </div>
@@ -244,19 +247,19 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-lg bg-brand-navy text-white flex items-center justify-center shrink-0">
-                    <FileCheck2 className="w-3.5 h-3.5 text-brand-teal" />
+                  <div className="w-6 h-6 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
+                    <FileCheck2 className="w-3.5 h-3.5" />
                   </div>
                   <span className="font-bold text-brand-navy">AI Claims Staging</span>
                 </div>
-                <span className="text-[11px] font-semibold text-brand-blue bg-white px-2 py-0.5 rounded border border-border-soft shrink-0">
+                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 shrink-0">
                   Instant Pre-Coding
                 </span>
               </div>
 
               <div className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-border-soft text-xs gap-2">
                 <span className="text-brand-navy font-semibold text-xs">Procedures Mapped to Codes</span>
-                <span className="text-[10px] font-bold text-brand-blue bg-blue-50 px-2 py-1 rounded border border-brand-blue/20 shrink-0">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-blue text-white shrink-0">
                   Staged for Biller Approval
                 </span>
               </div>
