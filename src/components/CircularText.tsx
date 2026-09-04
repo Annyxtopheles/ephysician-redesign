@@ -111,7 +111,9 @@ const CircularText: React.FC<CircularTextProps> = ({
         return (
           <span key={i} style={{ transform, WebkitTransform: transform }}>
             {letter === '+' ? (
-              <span className="text-brand-teal font-black text-sm drop-shadow-xs">+</span>
+              <span className="text-white font-black text-lg inline-block -translate-y-0.5 leading-none">
+                +
+              </span>
             ) : (
               letter
             )}

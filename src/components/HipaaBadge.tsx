@@ -11,7 +11,7 @@ interface HipaaBadgeProps {
 
 export const HipaaBadge: React.FC<HipaaBadgeProps> = ({
   className = '',
-  size = 200,
+  size = 220,
   spinDuration = 20,
   onHover = 'speedUp'
 }) => {
@@ -20,24 +20,27 @@ export const HipaaBadge: React.FC<HipaaBadgeProps> = ({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
     >
-      {/* Outer ambient decorative ring / soft pulse */}
-      <div className="absolute inset-1 rounded-full bg-brand-teal/5 border border-brand-teal/20 shadow-xs pointer-events-none group-hover:border-brand-teal/40 group-hover:bg-brand-teal/10 transition-all duration-300" />
+      {/* Outer subtle shadow / ambient ring */}
+      <div className="absolute -inset-1.5 rounded-full bg-brand-blue/15 blur-sm opacity-60 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-      {/* Rotating Circular Text */}
+      {/* Outer Blue Band with Thin Inner & Outer Accent Lines */}
+      <div className="absolute inset-0 rounded-full bg-brand-blue border-2 border-brand-blue/40 shadow-md overflow-hidden pointer-events-none" />
+
+      {/* Rotating White Circular Text */}
       <CircularText
-        text="HIPAA + COMPLIANT + "
+        text="HIPAA COMPLIANT + HIPAA COMPLIANT + "
         spinDuration={spinDuration}
         onHover={onHover}
-        className="text-[#0D405F] tracking-widest text-xs sm:text-sm font-black"
+        className="text-white font-extrabold tracking-wider"
       />
 
-      {/* Center Static Emblem with HIPAA Logo */}
+      {/* Static Center White Disc with Large Medical Caduceus Emblem */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-white border border-border-soft shadow-md flex items-center justify-center p-3.5 group-hover:scale-105 group-hover:shadow-lg transition-transform duration-300">
+        <div className="w-[136px] h-[136px] rounded-full bg-white border-2 border-brand-blue shadow-inner flex items-center justify-center p-3">
           <img
             src={hipaaLogo}
             alt="HIPAA Compliant"
-            className="w-full h-full object-contain filter drop-shadow-xs"
+            className="w-24 h-24 sm:w-26 sm:h-26 object-contain"
           />
         </div>
       </div>

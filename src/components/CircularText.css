@@ -16,11 +16,12 @@
   display: inline-block;
   left: 0;
   right: 0;
-  top: 8px;
+  top: 10px;
   bottom: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }

@@ -23,57 +23,56 @@ export const TrustBar: React.FC = () => {
   const row1Logos = [
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={nexhealthLogo} alt="NexHealth" className="h-5 sm:h-5.5 w-auto max-w-[130px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={nexhealthLogo} alt="NexHealth" className="h-5 sm:h-5.5 w-auto max-w-[125px] object-contain" />
         </div>
       ),
       title: 'NexHealth',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={ecwLogo} alt="eClinicalWorks" className="h-4.5 sm:h-5 w-auto max-w-[145px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={ecwLogo} alt="eClinicalWorks" className="h-4 sm:h-4.5 w-auto max-w-[140px] object-contain" />
         </div>
       ),
       title: 'eClinicalWorks',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={sikkaLogo} alt="Sikka" className="h-4.5 sm:h-5 w-auto max-w-[110px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={sikkaLogo} alt="Sikka" className="h-4 sm:h-4.5 w-auto max-w-[105px] object-contain" />
         </div>
       ),
       title: 'Sikka',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={twilioLogo} alt="Twilio" className="h-5 sm:h-5.5 w-auto max-w-[100px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={twilioLogo} alt="Twilio" className="h-4.5 sm:h-5 w-auto max-w-[95px] object-contain" />
         </div>
       ),
       title: 'Twilio',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={stediLogo} alt="Stedi" className="h-5 sm:h-5.5 w-auto max-w-[95px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={stediLogo} alt="Stedi" className="h-3.5 sm:h-4 w-auto max-w-[80px] object-contain" />
         </div>
       ),
       title: 'Stedi',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={stripeLogo} alt="Stripe" className="h-5 sm:h-5.5 w-auto max-w-[80px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={stripeLogo} alt="Stripe" className="h-3.5 sm:h-4 w-auto max-w-[70px] object-contain" />
         </div>
       ),
       title: 'Stripe',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center gap-2.5">
-          <img src={googleCalendarLogo} alt="Google Calendar" className="w-5 h-5 sm:w-5.5 sm:h-5.5 object-contain" />
-          <span className="text-sm font-bold text-[#1A2B3D] tracking-tight whitespace-nowrap">Google Calendar</span>
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={googleCalendarLogo} alt="Google Calendar" className="h-5 w-5 sm:h-5.5 sm:w-5.5 object-contain" />
         </div>
       ),
       title: 'Google Calendar',
@@ -84,32 +83,32 @@ export const TrustBar: React.FC = () => {
   const row2Logos = [
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={openDentalLogo} alt="Open Dental" className="h-5 sm:h-5.5 w-auto max-w-[130px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={openDentalLogo} alt="Open Dental" className="h-4.5 sm:h-5 w-auto max-w-[125px] object-contain" />
         </div>
       ),
       title: 'Open Dental',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={dentrixLogo} alt="Dentrix" className="h-4 sm:h-4.5 w-auto max-w-[125px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={dentrixLogo} alt="Dentrix" className="h-3.5 sm:h-4 w-auto max-w-[115px] object-contain" />
         </div>
       ),
       title: 'Dentrix',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={eaglesoftLogo} alt="Eaglesoft" className="h-5 sm:h-5.5 w-auto max-w-[125px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={eaglesoftLogo} alt="Eaglesoft" className="h-4.5 sm:h-5 w-auto max-w-[120px] object-contain" />
         </div>
       ),
       title: 'Eaglesoft',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center gap-2.5">
-          <img src={curveDentalLogo} alt="Curve Dental" className="w-5 h-5 sm:w-5.5 sm:h-5.5 object-contain" />
+        <div className="flex items-center justify-center gap-2 px-4 select-none">
+          <img src={curveDentalLogo} alt="Curve Dental" className="h-4 w-4 object-contain" />
           <span className="text-sm font-bold text-[#1A2B3D] tracking-tight whitespace-nowrap">Curve Dental</span>
         </div>
       ),
@@ -117,32 +116,32 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={openaiLogo} alt="OpenAI" className="h-5 sm:h-5.5 w-auto max-w-[105px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={openaiLogo} alt="OpenAI" className="h-4.5 sm:h-5 w-auto max-w-[100px] object-contain" />
         </div>
       ),
       title: 'OpenAI',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={elevenlabsLogo} alt="ElevenLabs" className="h-4.5 sm:h-5 w-auto max-w-[115px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={elevenlabsLogo} alt="ElevenLabs" className="h-3.5 sm:h-4 w-auto max-w-[110px] object-contain" />
         </div>
       ),
       title: 'ElevenLabs',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={sendgridLogo} alt="SendGrid" className="h-4.5 sm:h-5 w-auto max-w-[110px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={sendgridLogo} alt="SendGrid" className="h-3.5 sm:h-4 w-auto max-w-[105px] object-contain" />
         </div>
       ),
       title: 'SendGrid',
     },
     {
       node: (
-        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
-          <img src={resendLogo} alt="Resend" className="h-4.5 sm:h-5 w-auto max-w-[100px] object-contain" />
+        <div className="flex items-center justify-center px-4 select-none">
+          <img src={resendLogo} alt="Resend" className="h-3.5 sm:h-4 w-auto max-w-[95px] object-contain" />
         </div>
       ),
       title: 'Resend',
@@ -157,16 +156,16 @@ export const TrustBar: React.FC = () => {
         </h2>
       </div>
 
-      {/* Row 1 & Row 2 with minimal vertical gap */}
-      <div className="w-full flex flex-col gap-1.5">
+      {/* Row 1 & Row 2 borderless sliders with minimal vertical gap */}
+      <div className="w-full flex flex-col gap-3">
         {/* Row 1: Right to Left (direction="left") */}
         <div className="w-full relative">
           <LogoLoop
             logos={row1Logos}
             speed={40}
             direction="left"
-            gap={14}
-            logoHeight={48}
+            gap={36}
+            logoHeight={32}
             pauseOnHover={true}
             fadeOut={true}
             fadeOutColor="#ffffff"
@@ -180,8 +179,8 @@ export const TrustBar: React.FC = () => {
             logos={row2Logos}
             speed={38}
             direction="right"
-            gap={14}
-            logoHeight={48}
+            gap={36}
+            logoHeight={32}
             pauseOnHover={true}
             fadeOut={true}
             fadeOutColor="#ffffff"
