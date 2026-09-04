@@ -227,7 +227,7 @@ export const TrustBar: React.FC = () => {
   return (
     <section id="integrations" className="pt-8 pb-4 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
-        <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-brand-navy tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
           Works with the systems you already have.
         </h2>
       </div>
