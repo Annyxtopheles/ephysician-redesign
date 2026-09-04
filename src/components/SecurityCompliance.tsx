@@ -1,5 +1,6 @@
 import React from 'react';
 import { Lock, Database, FileCheck } from 'lucide-react';
+import { HipaaBadge } from './HipaaBadge';
 
 export const SecurityCompliance: React.FC = () => {
   const securityPillars = [
@@ -27,8 +28,11 @@ export const SecurityCompliance: React.FC = () => {
     <section id="security" className="py-10 md:py-14 bg-surface-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header - Tagline Removed */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        {/* Section Header with Centered Rotating HIPAA Seal */}
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-10">
+          <div className="mb-4">
+            <HipaaBadge size={190} spinDuration={22} onHover="speedUp" />
+          </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
             Security built in, not bolted on.
           </h2>
