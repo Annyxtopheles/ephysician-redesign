@@ -23,98 +23,57 @@ export const TrustBar: React.FC = () => {
   const row1Logos = [
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#0066F5]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={nexhealthLogo} alt="NexHealth" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">NexHealth</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Patient + appointment sync</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={nexhealthLogo} alt="NexHealth" className="h-5 sm:h-5.5 w-auto max-w-[130px] object-contain" />
         </div>
       ),
       title: 'NexHealth',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#173E58]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={ecwLogo} alt="eClinicalWorks" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">eClinicalWorks</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">EHR + practice management</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={ecwLogo} alt="eClinicalWorks" className="h-4.5 sm:h-5 w-auto max-w-[145px] object-contain" />
         </div>
       ),
       title: 'eClinicalWorks',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#681C9A]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={sikkaLogo} alt="Sikka" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Sikka</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Practice analytics</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={sikkaLogo} alt="Sikka" className="h-4.5 sm:h-5 w-auto max-w-[110px] object-contain" />
         </div>
       ),
       title: 'Sikka',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#DB132A]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={twilioLogo} alt="Twilio" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Twilio</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Voice & SMS</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={twilioLogo} alt="Twilio" className="h-5 sm:h-5.5 w-auto max-w-[100px] object-contain" />
         </div>
       ),
       title: 'Twilio',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#009086]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={stediLogo} alt="Stedi" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Stedi</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Insurance eligibility</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={stediLogo} alt="Stedi" className="h-5 sm:h-5.5 w-auto max-w-[95px] object-contain" />
         </div>
       ),
       title: 'Stedi',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#635BFF]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={stripeLogo} alt="Stripe" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Stripe</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Payments</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={stripeLogo} alt="Stripe" className="h-5 sm:h-5.5 w-auto max-w-[80px] object-contain" />
         </div>
       ),
       title: 'Stripe',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#4285F4]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={googleCalendarLogo} alt="Google Calendar" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Google Calendar</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Provider calendars</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center gap-2.5">
+          <img src={googleCalendarLogo} alt="Google Calendar" className="w-5 h-5 sm:w-5.5 sm:h-5.5 object-contain" />
+          <span className="text-sm font-bold text-[#1A2B3D] tracking-tight whitespace-nowrap">Google Calendar</span>
         </div>
       ),
       title: 'Google Calendar',
@@ -125,112 +84,65 @@ export const TrustBar: React.FC = () => {
   const row2Logos = [
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#1E88E5]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={openDentalLogo} alt="Open Dental" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Open Dental</span>
-            <span className="text-[10px] text-brand-blue font-semibold block">Via NexHealth Synchronizer</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={openDentalLogo} alt="Open Dental" className="h-5 sm:h-5.5 w-auto max-w-[130px] object-contain" />
         </div>
       ),
       title: 'Open Dental',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#002E6D]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={dentrixLogo} alt="Dentrix" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Dentrix</span>
-            <span className="text-[10px] text-brand-blue font-semibold block">Via NexHealth Synchronizer</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={dentrixLogo} alt="Dentrix" className="h-4 sm:h-4.5 w-auto max-w-[125px] object-contain" />
         </div>
       ),
       title: 'Dentrix',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#0B1E33]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={eaglesoftLogo} alt="Eaglesoft" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Eaglesoft</span>
-            <span className="text-[10px] text-brand-blue font-semibold block">Via NexHealth Synchronizer</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={eaglesoftLogo} alt="Eaglesoft" className="h-5 sm:h-5.5 w-auto max-w-[125px] object-contain" />
         </div>
       ),
       title: 'Eaglesoft',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#00838F]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={curveDentalLogo} alt="Curve Dental" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Curve Dental</span>
-            <span className="text-[10px] text-brand-blue font-semibold block">Via NexHealth Synchronizer</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center gap-2.5">
+          <img src={curveDentalLogo} alt="Curve Dental" className="w-5 h-5 sm:w-5.5 sm:h-5.5 object-contain" />
+          <span className="text-sm font-bold text-[#1A2B3D] tracking-tight whitespace-nowrap">Curve Dental</span>
         </div>
       ),
       title: 'Curve Dental',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#10A37F]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={openaiLogo} alt="OpenAI" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">OpenAI</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">AI understanding</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={openaiLogo} alt="OpenAI" className="h-5 sm:h-5.5 w-auto max-w-[105px] object-contain" />
         </div>
       ),
       title: 'OpenAI',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#111827]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={elevenlabsLogo} alt="ElevenLabs" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">ElevenLabs</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Voice synthesis</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={elevenlabsLogo} alt="ElevenLabs" className="h-4.5 sm:h-5 w-auto max-w-[115px] object-contain" />
         </div>
       ),
       title: 'ElevenLabs',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#1A82E2]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={sendgridLogo} alt="SendGrid" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">SendGrid</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Transactional email</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={sendgridLogo} alt="SendGrid" className="h-4.5 sm:h-5 w-auto max-w-[110px] object-contain" />
         </div>
       ),
       title: 'SendGrid',
     },
     {
       node: (
-        <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200">
-          <div className="w-8 h-8 rounded-lg bg-[#000000]/5 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={resendLogo} alt="Resend" className="w-full h-full object-contain" />
-          </div>
-          <div className="text-left">
-            <span className="text-sm font-bold text-[#1A2B3D] block leading-tight">Resend</span>
-            <span className="text-[10px] text-text-body/60 font-semibold block">Transactional email</span>
-          </div>
+        <div className="h-12 px-5 rounded-xl bg-white border border-border-soft hover:border-brand-blue/40 shadow-xs hover:shadow-md transition-all duration-200 flex items-center justify-center">
+          <img src={resendLogo} alt="Resend" className="h-4.5 sm:h-5 w-auto max-w-[100px] object-contain" />
         </div>
       ),
       title: 'Resend',
@@ -253,8 +165,8 @@ export const TrustBar: React.FC = () => {
             logos={row1Logos}
             speed={40}
             direction="left"
-            gap={12}
-            logoHeight={44}
+            gap={14}
+            logoHeight={48}
             pauseOnHover={true}
             fadeOut={true}
             fadeOutColor="#ffffff"
@@ -268,8 +180,8 @@ export const TrustBar: React.FC = () => {
             logos={row2Logos}
             speed={38}
             direction="right"
-            gap={12}
-            logoHeight={44}
+            gap={14}
+            logoHeight={48}
             pauseOnHover={true}
             fadeOut={true}
             fadeOutColor="#ffffff"
