@@ -145,4 +145,22 @@ body {
   animation: ecgPulse 3.5s linear infinite;
 }
 
+/* Beam Input Masking Support */
+.mask-with-browser-support {
+  -webkit-mask-composite: xor;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-position: 0 0, 0 0;
+  mask-position: 0 0, 0 0;
+  -webkit-mask-size: auto, auto;
+  mask-size: auto, auto;
+  -webkit-mask-repeat: repeat, repeat;
+  mask-repeat: repeat, repeat;
+  -webkit-mask-clip: padding-box, border-box;
+  mask-clip: padding-box, border-box;
+  -webkit-mask-origin: padding-box, border-box;
+  mask-origin: padding-box, border-box;
+  mask-composite: exclude;
+}
+
 

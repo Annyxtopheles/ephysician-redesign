@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { BeamInput } from './BeamInput';
 import doctorRelaxingWebp from '../assets/doctor-relaxing.webp';
 
 interface FinalCTAProps {
@@ -35,23 +35,9 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRequestDemo }) => {
               <span className="text-[#56BBE5]">its mornings back</span>
             </h2>
 
-            {/* Centered CTAs using solid brand blue */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={onRequestDemo}
-                className="w-full sm:w-auto py-3 px-7 rounded-xl font-heading font-bold text-sm sm:text-base text-white bg-brand-blue hover:bg-brand-blue-hover transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 group shadow-md"
-              >
-                <span>Request a Demo</span>
-                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-0.5" />
-              </button>
-
-              <a
-                href="#workflows"
-                className="w-full sm:w-auto py-3 px-6 rounded-xl font-heading font-bold text-sm sm:text-base text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all duration-200 inline-flex items-center justify-center gap-2"
-              >
-                <Play className="w-3.5 h-3.5 text-white fill-current" />
-                <span>Watch Video</span>
-              </a>
+            {/* Animated Beam Input in place of old buttons */}
+            <div className="pt-3 w-full">
+              <BeamInput onRequestDemo={onRequestDemo} />
             </div>
 
           </div>
