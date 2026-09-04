@@ -131,18 +131,10 @@ export const FAQ: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="mb-2">
-            <span className="text-xs font-bold font-heading text-brand-blue uppercase tracking-wider">
-              FREQUENTLY ASKED QUESTIONS
-            </span>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
-            Everything you need to know about ePhysician.
+            FAQs
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-text-body">
-            Have questions about onboarding, EHR sync, or voice quality? We've got answers.
-          </p>
         </div>
 
         {/* Tab Filters */}
