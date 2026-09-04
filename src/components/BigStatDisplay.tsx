@@ -85,7 +85,7 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
       <div className="flex items-center gap-3 flex-wrap">
         {/* If static text like 24/7 */}
         {staticText ? (
-          <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading bg-gradient-to-r from-[#50C6CC] to-[#2E94C1] bg-clip-text text-transparent tracking-tight leading-none select-none">
+          <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-brand-blue tracking-tight leading-none select-none">
             {staticText}
           </span>
         ) : (
@@ -99,7 +99,7 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
             <span className="text-brand-blue font-bold text-lg sm:text-xl lg:text-2xl select-none">
               →
             </span>
-            <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading bg-gradient-to-r from-[#50C6CC] to-[#2E94C1] bg-clip-text text-transparent tracking-tight leading-none select-none tabular-nums inline-flex items-baseline">
+            <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-brand-blue tracking-tight leading-none select-none tabular-nums inline-flex items-baseline">
               {prefix && <span>{prefix}</span>}
               <span>{value}</span>
               {suffix && <span>{suffix}</span>}
