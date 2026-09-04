@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-teal: #50C6CC;
+  --brand-blue: #2E94C1;
+  --brand-navy: #1A2B3D;
+  --surface-white: #FFFFFF;
+  --surface-pale: #EFFAFB;
+  --text-body: #3D4A5C;
+  --border-soft: #DCEEF1;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-body);
+  background-color: var(--surface-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--text-body);
+  background-color: var(--surface-white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glass & Noise Effects */
+.header-liquid-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 0 24px rgba(46, 148, 193, 0.12),
+    inset 2px 2px 3px 0 rgba(255, 255, 255, 0.8),
+    inset -2px -2px 3px 0 rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 20px 40px -15px rgba(26, 43, 61, 0.08),
+    0 0 0 1px rgba(80, 198, 204, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.noisy-glass-border {
+  position: relative;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(80, 198, 204, 0.35);
+  box-shadow:
+    0 12px 32px -4px rgba(26, 43, 61, 0.1),
+    0 4px 12px -2px rgba(26, 43, 61, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.noisy-glass-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(80, 198, 204, 0.8), rgba(46, 148, 193, 0.4), rgba(255, 255, 255, 0.9));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+@keyframes gentleFloat1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes gentleFloat2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes gentleFloat3 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-1 {
+  animation: gentleFloat1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: gentleFloat2 5s ease-in-out infinite 1s;
+}
+
+.animate-float-3 {
+  animation: gentleFloat3 7s ease-in-out infinite 2s;
+}
+
+/* FeedSpring style downwards hero gradient using brand palette */
+.hero-gradient-bg {
+  background: linear-gradient(
+    180deg,
+    #2185b3 0%,
+    #2e94c1 16%,
+    #4fb3d9 35%,
+    #93d4e8 56%,
+    #cef0f4 75%,
+    #eaf8fa 88%,
+    #ffffff 100%
+  );
+}
+
+/* ECG Heartbeat Line Animation */
+@keyframes ecgPulse {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-ecg {
+  stroke-dasharray: 600;
+  animation: ecgPulse 3.5s linear infinite;
+}
+
+
