@@ -8,6 +8,7 @@ interface CircularTextProps {
   spinDuration?: number;
   onHover?: 'slowDown' | 'speedUp' | 'pause' | 'goBonkers' | false;
   className?: string;
+  fontSize?: string;
 }
 
 const getRotationTransition = (duration: number, from: number, loop = true) => ({
@@ -32,7 +33,8 @@ const CircularText: React.FC<CircularTextProps> = ({
   text,
   spinDuration = 20,
   onHover = 'speedUp',
-  className = ''
+  className = '',
+  fontSize = '20px'
 }) => {
   const letters = Array.from(text);
   const controls = useAnimation();
@@ -95,7 +97,11 @@ const CircularText: React.FC<CircularTextProps> = ({
   return (
     <motion.div
       className={`circular-text ${className}`}
-      style={{ rotate: rotation }}
+      style={{
+        rotate: rotation,
+        // @ts-expect-error CSS variable
+        '--circular-font-size': fontSize
+      }}
       initial={{ rotate: 0 }}
       animate={controls}
       onMouseEnter={handleHoverStart}
@@ -111,7 +117,7 @@ const CircularText: React.FC<CircularTextProps> = ({
         return (
           <span key={i} style={{ transform, WebkitTransform: transform }}>
             {letter === '+' ? (
-              <span className="text-white font-black text-lg inline-block -translate-y-0.5 leading-none">
+              <span className="text-white font-black text-2xl sm:text-3xl inline-block -translate-y-0.5 leading-none">
                 +
               </span>
             ) : (

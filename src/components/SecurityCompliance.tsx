@@ -30,8 +30,8 @@ export const SecurityCompliance: React.FC = () => {
         
         {/* Section Header with Centered Rotating HIPAA Seal */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-10">
-          <div className="mb-4">
-            <HipaaBadge size={190} spinDuration={22} onHover="speedUp" />
+          <div className="mb-6">
+            <HipaaBadge size={240} spinDuration={22} onHover="speedUp" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
             Security built in, not bolted on.
