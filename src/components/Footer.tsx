@@ -136,11 +136,6 @@ export const Footer: React.FC<FooterProps> = () => {
                   Become a Partner
                 </a>
               </li>
-              <li>
-                <span className="text-xs text-text-body/60 block pt-1">
-                  Primary Audience: 1–10 Provider Clinics
-                </span>
-              </li>
             </ul>
           </div>
 

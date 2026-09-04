@@ -1,30 +1,24 @@
 import React from 'react';
-import { RefreshCw, Coins, Zap, Sliders, ShieldCheck } from 'lucide-react';
 
 export const WhyPracticesSwitch: React.FC = () => {
   const differentiators = [
     {
-      icon: <RefreshCw className="w-5 h-5 text-brand-teal" />,
       title: 'Works alongside your EHR',
       description: 'Integrates directly with NexHealth, OpenDental, and eClinicalWorks — no migration, no staff retraining.',
     },
     {
-      icon: <Coins className="w-5 h-5 text-brand-blue" />,
       title: 'Usage-based pricing',
       description: 'Pay proportional to your actual call and reminder volume, not a fixed \$1,500/mo subscription.',
     },
     {
-      icon: <Zap className="w-5 h-5 text-brand-teal" />,
       title: 'Live in under 24 hours',
       description: 'Point your existing clinic phone number and launch the same day — not the usual 4 to 6 weeks.',
     },
     {
-      icon: <Sliders className="w-5 h-5 text-brand-blue" />,
       title: 'Staff customize scripts directly',
       description: 'Configure Sarah’s voice, appointment rules, and guidelines yourself without waiting on IT tickets.',
     },
     {
-      icon: <ShieldCheck className="w-5 h-5 text-brand-navy" />,
       title: 'HIPAA & PCI DSS Level 1',
       description: 'BAA available immediately. Zero patient data is ever used to train public AI models.',
     },
@@ -50,10 +44,6 @@ export const WhyPracticesSwitch: React.FC = () => {
                 idx === 4 ? 'sm:col-span-2 lg:col-span-1' : ''
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-surface-pale border border-border-soft flex items-center justify-center mb-4">
-                {item.icon}
-              </div>
-
               <h3 className="text-base sm:text-lg font-bold font-heading text-brand-navy tracking-tight">
                 {item.title}
               </h3>

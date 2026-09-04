@@ -89,16 +89,13 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
             {staticText}
           </span>
         ) : (
-          /* Before → After pair */
-          <div className="flex items-center gap-2 xl:gap-3 flex-nowrap">
+          /* Before and After numbers */
+          <div className="flex items-center gap-2.5 sm:gap-3 flex-nowrap">
             {before && (
               <span className="text-base sm:text-lg xl:text-xl font-bold text-text-body/50 line-through decoration-text-body/40 select-none whitespace-nowrap">
                 {before}
               </span>
             )}
-            <span className="text-brand-blue font-bold text-base sm:text-lg xl:text-xl select-none">
-              →
-            </span>
             <span className="text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading text-brand-blue tracking-tight leading-none select-none tabular-nums inline-flex items-baseline whitespace-nowrap">
               {prefix && <span>{prefix}</span>}
               <span>{value}</span>
