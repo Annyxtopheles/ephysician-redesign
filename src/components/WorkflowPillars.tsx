@@ -23,20 +23,23 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
           </h2>
         </div>
 
-        {/* 4 Pillars Grid — 4 cards in 1 line on desktop, two-row layout with proof snippets */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {/* 4 Pillars Grid — 4 cards in 1 line on desktop, two-row layout with contained brand icons */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
           
           {/* Card 1 — AI Voice Scheduling */}
-          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-border-soft">
-            <img
-              src={bgVoice}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
-            />
+          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group border border-border-soft">
+            {/* Fixed Bounding Area for Brand Glass Icon */}
+            <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center pointer-events-none select-none z-0">
+              <img
+                src={bgVoice}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
             {/* Top Row — Unchanged */}
-            <div className="relative z-10 flex flex-col items-start text-left space-y-2">
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-16 sm:pr-20 min-h-[125px] sm:min-h-[135px]">
               <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
                 AI VOICE SCHEDULING
               </span>
@@ -51,7 +54,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             </div>
 
             {/* Second Row — Mini-UI Proof Snippet */}
-            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-5">
+            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
@@ -80,16 +83,19 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
           </div>
 
           {/* Card 2 — Automated Reminders */}
-          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-border-soft">
-            <img
-              src={bgReminders}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
-            />
+          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group border border-border-soft">
+            {/* Fixed Bounding Area for Brand Glass Icon */}
+            <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center pointer-events-none select-none z-0">
+              <img
+                src={bgReminders}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
             {/* Top Row — Unchanged */}
-            <div className="relative z-10 flex flex-col items-start text-left space-y-2">
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-16 sm:pr-20 min-h-[125px] sm:min-h-[135px]">
               <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
                 AUTOMATED REMINDERS
               </span>
@@ -109,7 +115,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             </div>
 
             {/* Second Row — Mini-UI Proof Snippet */}
-            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-5">
+            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
@@ -139,16 +145,19 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
           </div>
 
           {/* Card 3 — Kiosk Check-In & Copay */}
-          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-border-soft">
-            <img
-              src={bgKiosk}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
-            />
+          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group border border-border-soft">
+            {/* Fixed Bounding Area for Brand Glass Icon */}
+            <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center pointer-events-none select-none z-0">
+              <img
+                src={bgKiosk}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
             {/* Top Row — Unchanged */}
-            <div className="relative z-10 flex flex-col items-start text-left space-y-2">
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-16 sm:pr-20 min-h-[125px] sm:min-h-[135px]">
               <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
                 KIOSK CHECK-IN & COPAY
               </span>
@@ -168,7 +177,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             </div>
 
             {/* Second Row — Mini-UI Proof Snippet */}
-            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-5">
+            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-lg bg-brand-teal text-white flex items-center justify-center shrink-0">
@@ -199,16 +208,19 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
           </div>
 
           {/* Card 4 — AI Claims Prep */}
-          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-border-soft">
-            <img
-              src={bgClaims}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none z-0 transition-transform duration-500 group-hover:scale-105"
-            />
+          <div className="relative bg-white rounded-2xl overflow-hidden p-5 sm:p-6 shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group border border-border-soft">
+            {/* Fixed Bounding Area for Brand Glass Icon */}
+            <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center pointer-events-none select-none z-0">
+              <img
+                src={bgClaims}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
             {/* Top Row — Unchanged */}
-            <div className="relative z-10 flex flex-col items-start text-left space-y-2">
+            <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-16 sm:pr-20 min-h-[125px] sm:min-h-[135px]">
               <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
                 AI CLAIMS PREP
               </span>
@@ -229,7 +241,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
             </div>
 
             {/* Second Row — Mini-UI Proof Snippet */}
-            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-5">
+            <div className="relative z-10 w-full bg-[#EFFAFB] rounded-xl p-3.5 sm:p-4 border border-border-soft space-y-3 mt-4 sm:mt-5">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-lg bg-brand-navy text-white flex items-center justify-center shrink-0">
