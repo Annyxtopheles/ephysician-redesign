@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrandLogo } from './BrandLogo';
-import { ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight } from 'lucide-react';
+import hipaaBadge from '../assets/hipaa-badge.png';
+import pciDssBadge from '../assets/pci-dss-badge.png';
 
 interface FooterProps {
   onRequestDemo: () => void;
@@ -51,9 +53,18 @@ export const Footer: React.FC<FooterProps> = ({ onRequestDemo }) => {
               AI voice agents and revenue automation for modern US medical and dental clinics. Answer every call, verify insurance, eliminate no-shows, and collect copays upfront.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-pale border border-border-soft text-xs text-brand-navy font-medium">
-              <ShieldCheck className="w-4 h-4 text-brand-teal" />
-              <span>HIPAA Compliant & PCI DSS Level 1 Certified</span>
+            {/* Side-by-Side Official Compliance Badges */}
+            <div className="flex items-center gap-4 pt-1">
+              <img
+                src={hipaaBadge}
+                alt="HIPAA Compliant"
+                className="h-16 sm:h-18 w-auto object-contain hover:scale-105 transition-transform duration-200 cursor-pointer"
+              />
+              <img
+                src={pciDssBadge}
+                alt="PCI-DSS Validated Level 1"
+                className="h-16 sm:h-18 w-auto object-contain hover:scale-105 transition-transform duration-200 cursor-pointer"
+              />
             </div>
 
             <div className="pt-2">
@@ -180,12 +191,6 @@ export const Footer: React.FC<FooterProps> = ({ onRequestDemo }) => {
             © 2026 SJ Innovation. All rights reserved. Powered by{' '}
             <span className="font-semibold text-brand-navy">Collab AI</span>.
           </p>
-
-          <div className="flex items-center gap-6">
-            <span>Built for US Medical & Dental Practices</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span className="font-medium text-brand-navy">Systems Operational</span>
-          </div>
         </div>
 
       </div>
