@@ -29,9 +29,9 @@ export const WhyPracticesSwitch: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Tagline Removed */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
-            Built to replace the busywork, not your systems.
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance">
+            Built to replace the busywork, not&nbsp;your&nbsp;systems.
           </h2>
         </div>
 

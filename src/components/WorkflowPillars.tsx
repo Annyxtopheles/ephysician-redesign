@@ -18,7 +18,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance">
             One platform. Four fixes. Real numbers.
           </h2>
         </div>
