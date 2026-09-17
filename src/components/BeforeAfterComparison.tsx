@@ -5,7 +5,6 @@ export const BeforeAfterComparison: React.FC = () => {
   const milestones = [
     {
       time: '07:45 AM',
-      phase: 'Shift Opening & Voicemails',
       without: {
         badge: 'Staff Burnout',
         headline: '40 voicemails deep before doors open',
@@ -21,7 +20,6 @@ export const BeforeAfterComparison: React.FC = () => {
     },
     {
       time: '10:30 AM',
-      phase: 'Patient Confirmations & Recalls',
       without: {
         badge: 'Manual Phone Tag',
         headline: '35 outbound dials into voicemail · 15% no-shows',
@@ -37,7 +35,6 @@ export const BeforeAfterComparison: React.FC = () => {
     },
     {
       time: '01:15 PM',
-      phase: 'Lobby Check-In & Copay Collection',
       without: {
         badge: 'Front-Desk Congestion',
         headline: 'Paper clipboards & 40% uncollected copays',
@@ -53,7 +50,6 @@ export const BeforeAfterComparison: React.FC = () => {
     },
     {
       time: '05:00 PM',
-      phase: 'End-of-Day Billing & Pre-Coding',
       without: {
         badge: 'Aging A/R Drag',
         headline: '60–90 day claim cycles & unbilled charts',
@@ -135,9 +131,6 @@ export const BeforeAfterComparison: React.FC = () => {
                   <Clock className="w-3.5 h-3.5 text-brand-blue" />
                   <span>{item.time}</span>
                 </div>
-                <span className="text-[10px] font-medium text-text-body/70 mt-1 text-center hidden lg:block">
-                  {item.phase}
-                </span>
               </div>
 
               {/* Right Column: With ePhysician */}
