@@ -64,7 +64,7 @@ export const DashboardShowcase: React.FC = () => {
               <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
-              <span className="ml-3 text-[11px] font-semibold text-text-body/70 hidden sm:inline font-mono">
+              <span className="ml-3 text-[11px] font-medium text-text-body/70 hidden sm:inline">
                 app.ephysician.biz/command-center
               </span>
             </div>

@@ -44,7 +44,7 @@ export const SecurityCompliance: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold font-mono tracking-widest text-brand-teal uppercase bg-brand-teal/10 px-3 py-1 rounded-full border border-brand-teal/20">
+          <span className="text-xs font-bold font-heading tracking-widest text-brand-teal uppercase bg-brand-teal/10 px-3 py-1 rounded-full border border-brand-teal/20">
             Enterprise Security
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance mt-3">
@@ -68,7 +68,7 @@ export const SecurityCompliance: React.FC = () => {
                   <div className="w-8 h-8 rounded-xl bg-white border border-border-soft flex items-center justify-center shadow-2xs">
                     {pillar.icon}
                   </div>
-                  <span className="font-mono text-[11px] font-bold text-brand-navy bg-white px-2.5 py-1 rounded-md border border-border-soft">
+                  <span className="text-[11px] font-bold text-brand-navy bg-white px-2.5 py-1 rounded-md border border-border-soft">
                     {pillar.spec}
                   </span>
                 </div>
@@ -87,7 +87,7 @@ export const SecurityCompliance: React.FC = () => {
                 {pillar.specs.map((specItem, sIdx) => (
                   <div key={sIdx} className="flex items-center justify-between text-[11px]">
                     <span className="text-text-body/70 font-medium">{specItem.label}</span>
-                    <span className="font-mono font-semibold text-brand-navy bg-white px-2 py-0.5 rounded border border-border-soft/70">
+                    <span className="font-semibold text-brand-navy bg-white px-2 py-0.5 rounded border border-border-soft/70">
                       {specItem.value}
                     </span>
                   </div>
@@ -113,7 +113,7 @@ export const SecurityCompliance: React.FC = () => {
             </div>
           </div>
 
-          <span className="font-mono text-xs font-bold text-brand-blue bg-surface-pale px-3.5 py-1.5 rounded-lg border border-border-soft shrink-0">
+          <span className="text-xs font-bold font-heading text-brand-blue bg-surface-pale px-3.5 py-1.5 rounded-lg border border-border-soft shrink-0">
             BAA Executed on Day 1
           </span>
         </div>

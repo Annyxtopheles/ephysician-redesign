@@ -8,7 +8,7 @@ export const WhyPracticesSwitch: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold font-mono tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
+          <span className="text-xs font-bold font-heading tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
             Platform Architecture
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance mt-3">
@@ -29,7 +29,7 @@ export const WhyPracticesSwitch: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
                   <Database className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-mono uppercase tracking-wider text-brand-blue">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-brand-blue">
                   Zero Migration Required
                 </span>
               </div>
@@ -65,7 +65,7 @@ export const WhyPracticesSwitch: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
                   <DollarSign className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-mono uppercase tracking-wider text-emerald-700">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-emerald-700">
                   Usage-Based Pricing
                 </span>
               </div>
@@ -97,7 +97,7 @@ export const WhyPracticesSwitch: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
                   <Zap className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-mono uppercase tracking-wider text-amber-700">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-amber-700">
                   Same-Day Launch
                 </span>
               </div>
@@ -110,7 +110,7 @@ export const WhyPracticesSwitch: React.FC = () => {
             </div>
 
             {/* Micro-Visual: 3-Step Pipeline */}
-            <div className="mt-6 flex items-center justify-between text-[11px] font-mono font-bold text-brand-navy bg-surface-pale p-3 rounded-xl border border-border-soft">
+            <div className="mt-6 flex items-center justify-between text-[11px] font-bold text-brand-navy bg-surface-pale p-3 rounded-xl border border-border-soft">
               <span className="text-brand-blue">1. Forward</span>
               <ArrowRight className="w-3 h-3 text-border-soft shrink-0" />
               <span className="text-brand-teal">2. Auth EHR</span>
@@ -126,7 +126,7 @@ export const WhyPracticesSwitch: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-brand-navy text-white flex items-center justify-center shrink-0">
                   <Sliders className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-mono uppercase tracking-wider text-brand-navy">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-brand-navy">
                   Custom Practice Rules
                 </span>
               </div>
@@ -140,13 +140,13 @@ export const WhyPracticesSwitch: React.FC = () => {
 
             {/* Micro-Visual: Protocol Pills */}
             <div className="mt-6 flex flex-wrap gap-1.5">
-              <span className="text-[10px] font-semibold font-mono bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
+              <span className="text-[10px] font-medium bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
                 Tone: Warm & Empathetic
               </span>
-              <span className="text-[10px] font-semibold font-mono bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
+              <span className="text-[10px] font-medium bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
                 Emergency Call Triage
               </span>
-              <span className="text-[10px] font-semibold font-mono bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
+              <span className="text-[10px] font-medium bg-surface-pale text-brand-navy px-2 py-1 rounded border border-border-soft">
                 English / Spanish Live
               </span>
             </div>
@@ -159,7 +159,7 @@ export const WhyPracticesSwitch: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-brand-teal text-white flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-mono uppercase tracking-wider text-brand-teal">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-brand-teal">
                   Healthcare Security
                 </span>
               </div>
@@ -176,7 +176,7 @@ export const WhyPracticesSwitch: React.FC = () => {
               <span className="flex items-center gap-1.5">
                 <Check className="w-3.5 h-3.5 text-emerald-600" /> BAA Ready Immediately
               </span>
-              <span className="font-mono text-[10px] bg-white px-2 py-0.5 rounded border border-emerald-200">
+              <span className="text-[10px] font-bold bg-white px-2 py-0.5 rounded border border-emerald-200">
                 PCI-DSS Level 1
               </span>
             </div>

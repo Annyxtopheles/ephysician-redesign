@@ -75,7 +75,7 @@ export const BeforeAfterComparison: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold font-mono tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
+          <span className="text-xs font-bold font-heading tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
             A Day in the Life
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance mt-3">
@@ -92,7 +92,7 @@ export const BeforeAfterComparison: React.FC = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
             Without ePhysician (The Backlog Trap)
           </div>
-          <div className="col-span-2 text-center text-text-body/60 font-mono">
+          <div className="col-span-2 text-center text-text-body/60 font-heading font-bold">
             Shift Timeline
           </div>
           <div className="col-span-5 text-emerald-800/90 pl-2 flex items-center gap-2">
@@ -116,7 +116,7 @@ export const BeforeAfterComparison: React.FC = () => {
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded">
                       {item.without.badge}
                     </span>
-                    <span className="font-mono text-xs font-bold text-rose-600">
+                    <span className="text-xs font-bold text-rose-600">
                       {item.without.stat}
                     </span>
                   </div>
@@ -131,7 +131,7 @@ export const BeforeAfterComparison: React.FC = () => {
 
               {/* Center Timeline Badge */}
               <div className="lg:col-span-2 flex flex-col items-center justify-center">
-                <div className="bg-white rounded-full px-3.5 py-1.5 border-2 border-brand-blue/30 shadow-xs flex items-center gap-1.5 font-mono text-xs font-bold text-brand-navy shrink-0">
+                <div className="bg-white rounded-full px-3.5 py-1.5 border-2 border-brand-blue/30 shadow-xs flex items-center gap-1.5 text-xs font-bold font-heading text-brand-navy shrink-0">
                   <Clock className="w-3.5 h-3.5 text-brand-blue" />
                   <span>{item.time}</span>
                 </div>
@@ -147,7 +147,7 @@ export const BeforeAfterComparison: React.FC = () => {
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
                       {item.with.badge}
                     </span>
-                    <span className="font-mono text-xs font-bold text-emerald-700">
+                    <span className="text-xs font-bold text-emerald-700">
                       {item.with.stat}
                     </span>
                   </div>

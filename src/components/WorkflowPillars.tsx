@@ -62,11 +62,11 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span className="font-bold text-brand-navy font-mono text-[11px] sm:text-xs">
+                  <span className="font-bold text-brand-navy text-[11px] sm:text-xs">
                     Inbound Call #4819 · Sarah (Voice)
                   </span>
                 </div>
-                <span className="font-mono text-[10px] sm:text-[11px] text-brand-blue font-semibold bg-brand-blue/10 px-2 py-0.5 rounded">
+                <span className="text-[10px] sm:text-[11px] text-brand-blue font-semibold bg-brand-blue/10 px-2 py-0.5 rounded">
                   OpenDental · Synced
                 </span>
               </div>
@@ -79,8 +79,8 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                     Delta Dental PPO Verified
                   </span>
                 </div>
-                <div className="flex items-center justify-between font-mono text-[11px] text-brand-navy pt-1 border-t border-border-soft/60">
-                  <span>Slot Booked: Thu 10:00 AM (Dr. Patel)</span>
+                <div className="flex items-center justify-between text-[11px] text-brand-navy pt-1 border-t border-border-soft/60">
+                  <span className="font-medium">Slot Booked: Thu 10:00 AM (Dr. Patel)</span>
                   <span className="text-brand-blue font-semibold">1-Ring Answer</span>
                 </div>
               </div>
@@ -133,11 +133,11 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-blue"></span>
-                  <span className="font-bold text-brand-navy font-mono text-[11px] sm:text-xs">
+                  <span className="font-bold text-brand-navy text-[11px] sm:text-xs">
                     2-Way SMS Dispatch · David L.
                   </span>
                 </div>
-                <span className="font-mono text-[10px] sm:text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="text-[10px] sm:text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                   Delivered 10:32 AM
                 </span>
               </div>
@@ -150,7 +150,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-border-soft/60">
-                  <span className="font-mono text-brand-navy font-semibold bg-surface-pale px-2 py-0.5 rounded border border-border-soft">
+                  <span className="text-brand-navy font-semibold bg-surface-pale px-2 py-0.5 rounded border border-border-soft">
                     Patient replied: &ldquo;C&rdquo;
                   </span>
                   <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
@@ -207,11 +207,11 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-teal"></span>
-                  <span className="font-bold text-brand-navy font-mono text-[11px] sm:text-xs">
+                  <span className="font-bold text-brand-navy text-[11px] sm:text-xs">
                     Terminal 02 (Lobby Kiosk) · Patient #1042
                   </span>
                 </div>
-                <span className="font-mono text-[10px] sm:text-[11px] text-brand-navy font-semibold bg-white px-2 py-0.5 rounded border border-border-soft">
+                <span className="text-[10px] sm:text-[11px] text-brand-navy font-semibold bg-white px-2 py-0.5 rounded border border-border-soft">
                   Check-in: 84 sec
                 </span>
               </div>
@@ -219,7 +219,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               {/* Terminal Transaction Block */}
               <div className="p-3 rounded-lg bg-white border border-border-soft text-xs space-y-1.5 shadow-2xs">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono font-bold text-brand-navy text-sm">
+                  <span className="font-bold text-brand-navy text-sm">
                     $25.00 Copay Collected
                   </span>
                   <span className="text-emerald-700 text-[10px] font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
@@ -279,18 +279,18 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-navy"></span>
-                  <span className="font-bold text-brand-navy font-mono text-[11px] sm:text-xs">
+                  <span className="font-bold text-brand-navy text-[11px] sm:text-xs">
                     Claim Staging #CLM-9821 · Dr. Kim
                   </span>
                 </div>
-                <span className="font-mono text-[10px] sm:text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="text-[10px] sm:text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                   Pre-Auth on File
                 </span>
               </div>
 
               {/* Procedure & Code Mapping Block */}
               <div className="p-3 rounded-lg bg-white border border-border-soft text-xs space-y-1.5 shadow-2xs">
-                <div className="flex items-center justify-between font-mono text-[11px]">
+                <div className="flex items-center justify-between text-[11px]">
                   <span className="font-semibold text-brand-navy">CPT 99214 + D0150 · ICD-10 M25.511</span>
                   <span className="text-brand-blue font-semibold">Auto-Mapped</span>
                 </div>
