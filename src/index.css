@@ -145,20 +145,7 @@ body {
   animation: ecgPulse 3.5s linear infinite;
 }
 
-/* Voice Waveform Line Animation (Sarah AI Receptionist) */
-@keyframes voiceWavePulse {
-  0% {
-    stroke-dashoffset: 1600;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
 
-.animate-voice-wave {
-  stroke-dasharray: 800;
-  animation: voiceWavePulse 4.5s linear infinite;
-}
 
 @keyframes heroBiolumBreathe {
   0%, 100% {
@@ -173,6 +160,82 @@ body {
 
 .animate-hero-biolum {
   animation: heroBiolumBreathe 8s ease-in-out infinite;
+}
+
+/* Floating Bioluminescent Micro-Particles */
+@keyframes particleRise1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate3d(24px, -350px, 0) scale(1.1);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate3d(-12px, -700px, 0) scale(0.7);
+    opacity: 0;
+  }
+}
+
+@keyframes particleRise2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(-28px, -400px, 0) scale(1.2);
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(18px, -800px, 0) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes particleRise3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.7;
+  }
+  55% {
+    transform: translate3d(18px, -330px, 0) scale(1.15);
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(-10px, -650px, 0) scale(0.75);
+    opacity: 0;
+  }
+}
+
+.animate-particle-1 {
+  animation: particleRise1 infinite ease-in-out;
+}
+
+.animate-particle-2 {
+  animation: particleRise2 infinite ease-in-out;
+}
+
+.animate-particle-3 {
+  animation: particleRise3 infinite ease-in-out;
 }
 
 /* Beam Input Masking Support */

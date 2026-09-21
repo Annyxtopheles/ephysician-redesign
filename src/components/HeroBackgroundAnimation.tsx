@@ -1,52 +1,72 @@
 import React from 'react';
 
+interface Particle {
+  id: number;
+  left: string;
+  bottom: string;
+  size: number;
+  color: string;
+  glow: string;
+  animClass: string;
+  duration: string;
+  delay: string;
+}
+
+// 22 artfully balanced bioluminescent particles
+const PARTICLES: Particle[] = [
+  { id: 1, left: '6%', bottom: '-40px', size: 3, color: 'bg-white/80', glow: 'shadow-[0_0_8px_rgba(255,255,255,0.8)]', animClass: 'animate-particle-1', duration: '18s', delay: '-2s' },
+  { id: 2, left: '12%', bottom: '20px', size: 4, color: 'bg-cyan-200/90', glow: 'shadow-[0_0_10px_rgba(80,198,204,0.7)]', animClass: 'animate-particle-2', duration: '22s', delay: '-9s' },
+  { id: 3, left: '18%', bottom: '-20px', size: 2.5, color: 'bg-white/70', glow: 'shadow-[0_0_6px_rgba(255,255,255,0.7)]', animClass: 'animate-particle-3', duration: '16s', delay: '-5s' },
+  { id: 4, left: '24%', bottom: '60px', size: 5, color: 'bg-white/90', glow: 'shadow-[0_0_12px_rgba(255,255,255,0.9)]', animClass: 'animate-particle-1', duration: '20s', delay: '-13s' },
+  { id: 5, left: '31%', bottom: '-10px', size: 3, color: 'bg-cyan-200/80', glow: 'shadow-[0_0_8px_rgba(80,198,204,0.6)]', animClass: 'animate-particle-2', duration: '19s', delay: '-4s' },
+  { id: 6, left: '38%', bottom: '40px', size: 2, color: 'bg-white/70', glow: 'shadow-[0_0_5px_rgba(255,255,255,0.6)]', animClass: 'animate-particle-3', duration: '15s', delay: '-11s' },
+  { id: 7, left: '44%', bottom: '-50px', size: 4, color: 'bg-white/85', glow: 'shadow-[0_0_9px_rgba(255,255,255,0.8)]', animClass: 'animate-particle-1', duration: '24s', delay: '-7s' },
+  { id: 8, left: '50%', bottom: '30px', size: 3, color: 'bg-cyan-100/90', glow: 'shadow-[0_0_8px_rgba(80,198,204,0.7)]', animClass: 'animate-particle-2', duration: '17s', delay: '-14s' },
+  { id: 9, left: '56%', bottom: '-30px', size: 2.5, color: 'bg-white/75', glow: 'shadow-[0_0_6px_rgba(255,255,255,0.7)]', animClass: 'animate-particle-3', duration: '21s', delay: '-3s' },
+  { id: 10, left: '63%', bottom: '50px', size: 4.5, color: 'bg-white/90', glow: 'shadow-[0_0_11px_rgba(255,255,255,0.85)]', animClass: 'animate-particle-1', duration: '19s', delay: '-16s' },
+  { id: 11, left: '70%', bottom: '-15px', size: 3, color: 'bg-cyan-200/80', glow: 'shadow-[0_0_8px_rgba(80,198,204,0.6)]', animClass: 'animate-particle-2', duration: '23s', delay: '-8s' },
+  { id: 12, left: '76%', bottom: '25px', size: 2, color: 'bg-white/70', glow: 'shadow-[0_0_5px_rgba(255,255,255,0.6)]', animClass: 'animate-particle-3', duration: '16s', delay: '-12s' },
+  { id: 13, left: '83%', bottom: '-45px', size: 4, color: 'bg-white/85', glow: 'shadow-[0_0_10px_rgba(255,255,255,0.8)]', animClass: 'animate-particle-1', duration: '21s', delay: '-6s' },
+  { id: 14, left: '89%', bottom: '35px', size: 3.5, color: 'bg-cyan-200/90', glow: 'shadow-[0_0_9px_rgba(80,198,204,0.7)]', animClass: 'animate-particle-2', duration: '18s', delay: '-15s' },
+  { id: 15, left: '95%', bottom: '-25px', size: 2.5, color: 'bg-white/75', glow: 'shadow-[0_0_6px_rgba(255,255,255,0.7)]', animClass: 'animate-particle-3', duration: '20s', delay: '-4s' },
+  { id: 16, left: '15%', bottom: '110px', size: 3, color: 'bg-white/80', glow: 'shadow-[0_0_7px_rgba(255,255,255,0.7)]', animClass: 'animate-particle-1', duration: '25s', delay: '-18s' },
+  { id: 17, left: '28%', bottom: '90px', size: 2.5, color: 'bg-cyan-200/80', glow: 'shadow-[0_0_6px_rgba(80,198,204,0.6)]', animClass: 'animate-particle-2', duration: '22s', delay: '-1s' },
+  { id: 18, left: '48%', bottom: '120px', size: 3.5, color: 'bg-white/85', glow: 'shadow-[0_0_9px_rgba(255,255,255,0.8)]', animClass: 'animate-particle-3', duration: '19s', delay: '-10s' },
+  { id: 19, left: '67%', bottom: '100px', size: 2.5, color: 'bg-cyan-100/85', glow: 'shadow-[0_0_6px_rgba(80,198,204,0.6)]', animClass: 'animate-particle-1', duration: '23s', delay: '-7s' },
+  { id: 20, left: '81%', bottom: '115px', size: 3, color: 'bg-white/80', glow: 'shadow-[0_0_7px_rgba(255,255,255,0.7)]', animClass: 'animate-particle-2', duration: '17s', delay: '-13s' },
+  { id: 21, left: '9%', bottom: '80px', size: 2, color: 'bg-white/70', glow: 'shadow-[0_0_5px_rgba(255,255,255,0.5)]', animClass: 'animate-particle-3', duration: '24s', delay: '-6s' },
+  { id: 22, left: '92%', bottom: '95px', size: 3, color: 'bg-cyan-200/80', glow: 'shadow-[0_0_7px_rgba(80,198,204,0.6)]', animClass: 'animate-particle-1', duration: '20s', delay: '-11s' },
+];
+
 export const HeroBackgroundAnimation: React.FC = () => {
   return (
     <div
       aria-hidden="true"
       className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0"
     >
-      {/* -------------------------------------------------------------
-          1. SUBTLE ATMOSPHERIC LIGHT (Calm, Soft Depth)
-          ------------------------------------------------------------- */}
+      {/* Soft atmospheric breathing light — calm, natural gradient depth */}
       <div className="absolute -top-32 left-1/3 w-[36rem] h-[36rem] rounded-full bg-white/10 blur-[140px] animate-hero-biolum" />
       <div
         className="absolute top-16 right-1/4 w-[32rem] h-[32rem] rounded-full bg-cyan-200/15 blur-[130px] animate-hero-biolum"
         style={{ animationDelay: '4s' }}
       />
 
-      {/* -------------------------------------------------------------
-          2. THE VOICE WAVEFORM HORIZON LINE (Sarah AI Receptionist)
-             A single, clean, elegant acoustic wave gliding across the
-             background — the voice counterpart to the footer's ECG.
-          ------------------------------------------------------------- */}
-      <div className="w-full absolute top-72 sm:top-80 md:top-96 left-0 right-0 overflow-hidden">
-        <div className="relative w-full h-12 flex items-center">
-          {/* Subtle guide line across the full viewport width */}
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[1px] bg-white/15" />
-
-          {/* Animated SVG Voice Waveform overlay */}
-          <svg
-            className="w-full h-12 relative z-10 overflow-visible opacity-85"
-            viewBox="0 0 1600 48"
-            fill="none"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Repeating Acoustic Speech Formants across 1600px width */}
-            <path
-              d="M 0 24 L 130 24 C 145 24, 155 17, 165 17 C 175 17, 182 31, 190 31 C 200 31, 208 7, 218 7 C 228 7, 235 41, 245 41 C 255 41, 265 11, 275 11 C 285 11, 292 33, 300 33 C 308 33, 315 20, 322 20 C 330 20, 338 24, 350 24 L 530 24 C 545 24, 555 17, 565 17 C 575 17, 582 31, 590 31 C 600 31, 608 7, 618 7 C 628 7, 635 41, 645 41 C 655 41, 665 11, 675 11 C 685 11, 692 33, 700 33 C 708 33, 715 20, 722 20 C 730 20, 738 24, 750 24 L 930 24 C 945 24, 955 17, 965 17 C 975 17, 982 31, 990 31 C 1000 31, 1008 7, 1018 7 C 1028 7, 1035 41, 1045 41 C 1055 41, 1065 11, 1075 11 C 1085 11, 1092 33, 1100 33 C 1108 33, 1115 20, 1122 20 C 1130 20, 1138 24, 1150 24 L 1330 24 C 1345 24, 1355 17, 1365 17 C 1375 17, 1382 31, 1390 31 C 1400 31, 1408 7, 1418 7 C 1428 7, 1435 41, 1445 41 C 1455 41, 1465 11, 1475 11 C 1485 11, 1492 33, 1500 33 C 1508 33, 1515 20, 1522 20 C 1530 20, 1538 24, 1550 24 L 1600 24"
-              stroke="#FFFFFF"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{
-                filter: 'drop-shadow(0 0 4px rgba(80, 198, 204, 0.6))',
-              }}
-              className="animate-voice-wave"
-            />
-          </svg>
-        </div>
+      {/* Floating bioluminescent micro-particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {PARTICLES.map((p) => (
+          <div
+            key={p.id}
+            className={`absolute rounded-full ${p.color} ${p.glow} ${p.animClass}`}
+            style={{
+              left: p.left,
+              bottom: p.bottom,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              animationDuration: p.duration,
+              animationDelay: p.delay,
+            }}
+          />
+        ))}
       </div>
     </div>
   );
