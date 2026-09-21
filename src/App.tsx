@@ -58,7 +58,7 @@ export function App() {
 
         {/* Security & Compliance */}
         <div id="security">
-          <SecurityCompliance />
+          <SecurityCompliance onRequestSecurityPacket={openDemoModal} />
         </div>
 
         {/* Frequently Asked Questions */}

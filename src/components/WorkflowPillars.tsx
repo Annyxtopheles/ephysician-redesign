@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { ArrowUpRight, Play, Pause } from 'lucide-react';
 import { BigStatDisplay } from './BigStatDisplay';
 
 import bgVoice from '../assets/cards/card-voice.png';
@@ -12,6 +12,74 @@ interface WorkflowPillarsProps {
 }
 
 export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo }) => {
+  const [isVoicePlaying, setIsVoicePlaying] = useState(false);
+  const [audioSeconds, setAudioSeconds] = useState(0);
+  const audioIntervalRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (audioIntervalRef.current) clearInterval(audioIntervalRef.current);
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  const toggleSarahAudio = () => {
+    if (isVoicePlaying) {
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      if (audioIntervalRef.current) clearInterval(audioIntervalRef.current);
+      setIsVoicePlaying(false);
+      setAudioSeconds(0);
+    } else {
+      setIsVoicePlaying(true);
+      setAudioSeconds(0);
+
+      const totalDuration = 8;
+      audioIntervalRef.current = window.setInterval(() => {
+        setAudioSeconds((prev) => {
+          if (prev >= totalDuration) {
+            if (audioIntervalRef.current) clearInterval(audioIntervalRef.current);
+            setIsVoicePlaying(false);
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const text = "Hi, thank you for calling Bay Dental Partners. My name is Sarah. I see an open hygiene slot tomorrow at 10 AM with Doctor Patel. Would that time work for you?";
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 1.0;
+        utterance.pitch = 1.05;
+        const voices = window.speechSynthesis.getVoices();
+        const preferredVoice = voices.find((v) =>
+          v.lang.startsWith('en') && (
+            v.name.includes('Natural') ||
+            v.name.includes('Samantha') ||
+            v.name.includes('Zira') ||
+            v.name.includes('Google US English') ||
+            v.name.includes('Female')
+          )
+        );
+        if (preferredVoice) utterance.voice = preferredVoice;
+        utterance.onend = () => {
+          if (audioIntervalRef.current) clearInterval(audioIntervalRef.current);
+          setIsVoicePlaying(false);
+          setAudioSeconds(0);
+        };
+        utterance.onerror = () => {
+          if (audioIntervalRef.current) clearInterval(audioIntervalRef.current);
+          setIsVoicePlaying(false);
+          setAudioSeconds(0);
+        };
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+  };
   return (
     <section id="features" className="py-10 md:py-14 bg-surface-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,6 +155,50 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                 <div className="flex items-center justify-between text-[11px] text-brand-navy pt-1 border-t border-border-soft/60">
                   <span className="font-medium">Slot Booked: Thu 10:00 AM (Dr. Patel)</span>
                   <span className="text-brand-blue font-semibold">1-Ring Answer</span>
+                </div>
+              </div>
+
+              {/* Interactive Voice Sample Player */}
+              <div className="p-2.5 rounded-lg bg-white border border-brand-blue/30 shadow-2xs flex items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={toggleSarahAudio}
+                  className="w-8 h-8 rounded-full bg-brand-blue hover:bg-brand-blue-hover text-white flex items-center justify-center shrink-0 shadow-xs transition-transform active:scale-95 cursor-pointer"
+                  aria-label={isVoicePlaying ? 'Pause Sarah sample' : 'Play Sarah sample'}
+                >
+                  {isVoicePlaying ? (
+                    <Pause className="w-3.5 h-3.5 fill-current" />
+                  ) : (
+                    <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                  )}
+                </button>
+
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between text-[11px] font-semibold">
+                    <span className="text-brand-navy truncate">
+                      {isVoicePlaying ? 'Live Audio: Inbound Booking Simulation' : 'Audio Preview · Sarah (Voice)'}
+                    </span>
+                    <span className="text-brand-blue text-[10px] font-bold tabular-nums">
+                      {isVoicePlaying ? `${audioSeconds}s / 8s` : '0:08'}
+                    </span>
+                  </div>
+
+                  {/* Dynamic Sound Waveform Bars */}
+                  <div className="flex items-center gap-1 h-3 mt-1">
+                    {[40, 75, 55, 95, 60, 85, 45, 90, 70, 40, 80, 65, 90, 50, 75, 45].map((defaultHeight, i) => (
+                      <span
+                        key={i}
+                        className={`w-1 rounded-full transition-all duration-150 ${
+                          isVoicePlaying ? 'bg-brand-blue animate-pulse' : 'bg-brand-blue/30'
+                        }`}
+                        style={{
+                          height: isVoicePlaying
+                            ? `${Math.max(25, Math.min(100, Math.sin((audioSeconds * 3) + i) * 60 + 50))}%`
+                            : `${defaultHeight}%`,
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 

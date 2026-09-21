@@ -1,7 +1,11 @@
 import React from 'react';
-import { ShieldCheck, Lock, Server, FileCheck } from 'lucide-react';
+import { ShieldCheck, Lock, Server, FileCheck, FileDown } from 'lucide-react';
 
-export const SecurityCompliance: React.FC = () => {
+interface SecurityComplianceProps {
+  onRequestSecurityPacket?: () => void;
+}
+
+export const SecurityCompliance: React.FC<SecurityComplianceProps> = ({ onRequestSecurityPacket }) => {
   const securityPillars = [
     {
       title: 'End-to-End Cryptography',
@@ -113,9 +117,21 @@ export const SecurityCompliance: React.FC = () => {
             </div>
           </div>
 
-          <span className="text-xs font-bold font-heading text-brand-blue bg-surface-pale px-3.5 py-1.5 rounded-lg border border-border-soft shrink-0">
-            BAA Executed on Day 1
-          </span>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <span className="text-xs font-bold font-heading text-brand-navy bg-surface-pale px-3 py-1.5 rounded-lg border border-border-soft">
+              BAA Executed on Day 1
+            </span>
+            {onRequestSecurityPacket && (
+              <button
+                type="button"
+                onClick={onRequestSecurityPacket}
+                className="py-2 px-3.5 rounded-lg font-heading font-bold text-xs text-white bg-brand-navy hover:bg-brand-blue transition-colors inline-flex items-center gap-1.5 shadow-2xs cursor-pointer"
+              >
+                <FileDown className="w-3.5 h-3.5" />
+                <span>Security Whitepaper (PDF)</span>
+              </button>
+            )}
+          </div>
         </div>
 
       </div>
