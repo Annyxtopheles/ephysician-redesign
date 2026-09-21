@@ -1,6 +1,6 @@
 import React from 'react';
 import { DashboardShowcase } from './DashboardShowcase';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   onRequestDemo: () => void;
@@ -39,10 +39,10 @@ export const Hero: React.FC<HeroProps> = ({ onRequestDemo }) => {
 
             <a
               href="#workflows"
-              className="w-full sm:w-auto py-3.5 px-7 rounded-xl font-heading font-bold text-base text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/30 transition-all duration-200 inline-flex items-center justify-center gap-2"
+              className="w-full sm:w-auto py-3.5 px-7 rounded-xl font-heading font-bold text-base text-white bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/30 transition-all duration-200 inline-flex items-center justify-center gap-2 group"
             >
-              <Play className="w-4 h-4 text-white fill-current" />
-              <span>Watch Video</span>
+              <span>Explore 4 Workflows</span>
+              <ArrowRight className="w-4 h-4 text-white/80 transition-transform group-hover:translate-x-0.5" />
             </a>
           </div>
 

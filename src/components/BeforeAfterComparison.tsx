@@ -105,8 +105,16 @@ export const BeforeAfterComparison: React.FC = () => {
           {milestones.map((item, idx) => (
             <div key={idx} className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
               
+              {/* Center Timeline Badge (First on mobile, center on desktop) */}
+              <div className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center">
+                <div className="bg-white rounded-full px-3.5 py-1.5 border-2 border-brand-blue/30 shadow-xs flex items-center gap-1.5 text-xs font-bold font-heading text-brand-navy shrink-0">
+                  <Clock className="w-3.5 h-3.5 text-brand-blue" />
+                  <span>{item.time}</span>
+                </div>
+              </div>
+
               {/* Left Column: Without ePhysician */}
-              <div className="lg:col-span-5 bg-[#FFF7F7] rounded-2xl p-5 sm:p-6 border border-rose-200/80 shadow-xs flex flex-col justify-between h-full">
+              <div className="order-2 lg:order-1 lg:col-span-5 bg-[#FFF7F7] rounded-2xl p-5 sm:p-6 border border-rose-200/80 shadow-xs flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded">
@@ -125,16 +133,8 @@ export const BeforeAfterComparison: React.FC = () => {
                 </div>
               </div>
 
-              {/* Center Timeline Badge */}
-              <div className="lg:col-span-2 flex flex-col items-center justify-center">
-                <div className="bg-white rounded-full px-3.5 py-1.5 border-2 border-brand-blue/30 shadow-xs flex items-center gap-1.5 text-xs font-bold font-heading text-brand-navy shrink-0">
-                  <Clock className="w-3.5 h-3.5 text-brand-blue" />
-                  <span>{item.time}</span>
-                </div>
-              </div>
-
               {/* Right Column: With ePhysician */}
-              <div className="lg:col-span-5 bg-[#F0FDF8] rounded-2xl p-5 sm:p-6 border border-emerald-200/90 shadow-xs flex flex-col justify-between h-full">
+              <div className="order-3 lg:order-3 lg:col-span-5 bg-[#F0FDF8] rounded-2xl p-5 sm:p-6 border border-emerald-200/90 shadow-xs flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">

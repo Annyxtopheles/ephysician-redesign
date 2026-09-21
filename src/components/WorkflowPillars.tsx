@@ -44,12 +44,17 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                 AI VOICE SCHEDULING
               </span>
 
-              {/* Big Stat Anchor — 24/7 */}
-              <BigStatDisplay staticText="24/7" textColor="black" />
+              {/* Big Stat Display — 42% → 0% */}
+              <BigStatDisplay
+                before="42%"
+                target={0}
+                suffix="%"
+                textColor="black"
+              />
 
               {/* Supporting one-line plain-English description */}
               <p className="text-sm sm:text-base text-text-body font-medium leading-relaxed">
-                Every call, answered in 1 ring.
+                Every call, answered in 1 ring. Zero missed inquiries.
               </p>
             </div>
 
