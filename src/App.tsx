@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { HeroBackgroundAnimation } from './components/HeroBackgroundAnimation';
 import { TrustBar } from './components/TrustBar';
 import { WorkflowPillars } from './components/WorkflowPillars';
 import { BeforeAfterComparison } from './components/BeforeAfterComparison';
@@ -29,17 +30,22 @@ export function App() {
   return (
     <div className="min-h-screen flex flex-col bg-surface-white text-text-body font-sans selection:bg-brand-teal/20 selection:text-brand-navy">
       {/* Top Hero Container with continuous downward gradient behind floating header */}
-      <div className="hero-gradient-bg relative w-full">
+      <div className="hero-gradient-bg relative w-full overflow-hidden">
+        {/* Animated Clinical Telemetry & Biometric Wave Background */}
+        <HeroBackgroundAnimation />
+
         {/* Floating Detached Header */}
         <Header onRequestDemo={openDemoModal} />
 
         {/* Hero Section with Dashboard Showcase */}
-        <div id="agents">
+        <div id="agents" className="relative z-10">
           <Hero onRequestDemo={openDemoModal} />
         </div>
 
         {/* Trust Bar with Integrations (seamlessly positioned on white gradient bottom) */}
-        <TrustBar />
+        <div className="relative z-10">
+          <TrustBar />
+        </div>
       </div>
 
       <main className="flex-grow">
