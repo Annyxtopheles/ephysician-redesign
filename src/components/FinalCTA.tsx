@@ -3,7 +3,7 @@ import { BeamInput } from './BeamInput';
 import doctorRelaxingWebp from '../assets/doctor-relaxing.webp';
 
 interface FinalCTAProps {
-  onRequestDemo: () => void;
+  onRequestDemo: (email?: string) => void;
 }
 
 export const FinalCTA: React.FC<FinalCTAProps> = ({ onRequestDemo }) => {
@@ -37,7 +37,10 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRequestDemo }) => {
 
             {/* Animated Beam Input in place of old buttons */}
             <div className="pt-3 w-full">
-              <BeamInput onRequestDemo={onRequestDemo} />
+              <BeamInput
+                onSubmitEmail={(email) => onRequestDemo(email)}
+                onRequestDemo={() => onRequestDemo()}
+              />
             </div>
 
           </div>

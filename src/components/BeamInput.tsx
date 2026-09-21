@@ -28,8 +28,7 @@ export const BeamInput: React.FC<BeamInputProps> = ({ onSubmitEmail, onRequestDe
     e.preventDefault();
     if (onSubmitEmail) {
       onSubmitEmail(email);
-    }
-    if (onRequestDemo) {
+    } else if (onRequestDemo) {
       onRequestDemo();
     }
   };

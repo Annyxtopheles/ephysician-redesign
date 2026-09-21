@@ -13,8 +13,12 @@ import { DemoModal } from './components/DemoModal';
 
 export function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+  const [demoInitialEmail, setDemoInitialEmail] = useState('');
 
-  const openDemoModal = () => {
+  const openDemoModal = (email?: string) => {
+    if (typeof email === 'string' && email.trim().length > 0) {
+      setDemoInitialEmail(email.trim());
+    }
     setIsDemoModalOpen(true);
   };
 
@@ -68,7 +72,7 @@ export function App() {
       <Footer onRequestDemo={openDemoModal} />
 
       {/* Interactive Live Demo Request Modal */}
-      <DemoModal isOpen={isDemoModalOpen} onClose={closeDemoModal} />
+      <DemoModal isOpen={isDemoModalOpen} onClose={closeDemoModal} initialEmail={demoInitialEmail} />
     </div>
   );
 }

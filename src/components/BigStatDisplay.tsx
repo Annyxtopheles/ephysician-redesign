@@ -88,7 +88,7 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
         {/* If static text like 24/7 */}
         {staticText ? (
           <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none ${
-            textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-black' : 'text-brand-blue'
+            textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-brand-navy' : 'text-brand-blue'
           }`}>
             {staticText}
           </span>
@@ -100,14 +100,14 @@ export const BigStatDisplay: React.FC<BigStatDisplayProps> = ({
                 textColor === 'white'
                   ? 'text-white/70 decoration-white/60'
                   : textColor === 'black'
-                  ? 'text-neutral-400 decoration-neutral-400'
+                  ? 'text-text-body/60 decoration-text-body/50'
                   : 'text-text-body/50 decoration-text-body/40'
               }`}>
                 {before}
               </span>
             )}
             <span className={`text-3xl sm:text-4xl xl:text-5xl font-extrabold font-heading tracking-tight leading-none select-none tabular-nums inline-flex items-baseline whitespace-nowrap ${
-              textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-black' : 'text-brand-blue'
+              textColor === 'white' ? 'text-white' : textColor === 'black' ? 'text-brand-navy' : 'text-brand-blue'
             }`}>
               {prefix && <span>{prefix}</span>}
               <span>{value}</span>

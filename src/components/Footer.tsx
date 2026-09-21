@@ -75,13 +75,13 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#features" className="text-text-body hover:text-brand-blue transition-colors">
-                  Features Overview
+                <a href="#workflows" className="text-text-body hover:text-brand-blue transition-colors">
+                  Workflows Overview
                 </a>
               </li>
               <li>
-                <a href="#agents" className="text-text-body hover:text-brand-blue transition-colors">
-                  AI Voice Agent (Sarah)
+                <a href="#compare" className="text-text-body hover:text-brand-blue transition-colors">
+                  Shift Comparison
                 </a>
               </li>
               <li>
@@ -90,13 +90,13 @@ export const Footer: React.FC<FooterProps> = () => {
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-text-body hover:text-brand-blue transition-colors">
-                  Usage-Based Pricing
+                <a href="#architecture" className="text-text-body hover:text-brand-blue transition-colors">
+                  Platform Architecture
                 </a>
               </li>
               <li>
-                <a href="#compare" className="text-text-body hover:text-brand-blue transition-colors">
-                  Platform Comparison
+                <a href="#security" className="text-text-body hover:text-brand-blue transition-colors">
+                  Enterprise Security
                 </a>
               </li>
               <li>
@@ -151,23 +151,23 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#privacy" className="text-text-body hover:text-brand-blue transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#terms" className="text-text-body hover:text-brand-blue transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#baa" className="text-text-body hover:text-brand-blue transition-colors">
-                  BAA Agreement
+                <a href="#security" className="text-text-body hover:text-brand-blue transition-colors">
+                  Security Architecture
                 </a>
               </li>
               <li>
                 <a href="#security" className="text-text-body hover:text-brand-blue transition-colors">
-                  Security Architecture
+                  HIPAA BAA Agreement
+                </a>
+              </li>
+              <li>
+                <a href="#security" className="text-text-body hover:text-brand-blue transition-colors">
+                  Zero Public AI Policy
+                </a>
+              </li>
+              <li>
+                <a href="#security" className="text-text-body hover:text-brand-blue transition-colors">
+                  PCI-DSS Level 1 Processing
                 </a>
               </li>
             </ul>

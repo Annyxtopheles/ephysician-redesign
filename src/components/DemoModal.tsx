@@ -1,21 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, CheckCircle2, Shield, Calendar, Sparkles } from 'lucide-react';
 
 interface DemoModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialEmail?: string;
 }
 
-export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
+export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, initialEmail = '' }) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
-    workEmail: '',
+    workEmail: initialEmail,
     practiceName: '',
     providersCount: '1-3',
     phone: '',
     specialty: 'Dental',
   });
+
+  useEffect(() => {
+    if (initialEmail) {
+      setFormData((prev) => ({ ...prev, workEmail: initialEmail }));
+    }
+  }, [initialEmail, isOpen]);
 
   if (!isOpen) return null;
 

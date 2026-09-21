@@ -40,7 +40,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
 
             {/* Top Row — Dominant Metric & Header */}
             <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-28 sm:pr-36 min-h-[110px] sm:min-h-[120px]">
-              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+              <span className="text-xs font-bold font-heading text-brand-navy uppercase tracking-wider">
                 AI VOICE SCHEDULING
               </span>
 
@@ -48,7 +48,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               <BigStatDisplay staticText="24/7" textColor="black" />
 
               {/* Supporting one-line plain-English description */}
-              <p className="text-sm sm:text-base text-black font-medium leading-relaxed">
+              <p className="text-sm sm:text-base text-text-body font-medium leading-relaxed">
                 Every call, answered in 1 ring.
               </p>
             </div>
@@ -109,7 +109,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
 
             {/* Top Row — Dominant Metric & Header */}
             <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-28 sm:pr-36 min-h-[110px] sm:min-h-[120px]">
-              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+              <span className="text-xs font-bold font-heading text-brand-navy uppercase tracking-wider">
                 AUTOMATED REMINDERS
               </span>
 
@@ -122,7 +122,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               />
 
               {/* Supporting one-line plain-English description */}
-              <p className="text-sm sm:text-base text-black font-medium leading-relaxed">
+              <p className="text-sm sm:text-base text-text-body font-medium leading-relaxed">
                 Automated reminders patients actually respond to.
               </p>
             </div>
@@ -183,7 +183,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
 
             {/* Top Row — Dominant Metric & Header */}
             <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-28 sm:pr-36 min-h-[110px] sm:min-h-[120px]">
-              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+              <span className="text-xs font-bold font-heading text-brand-navy uppercase tracking-wider">
                 KIOSK CHECK-IN & COPAY
               </span>
 
@@ -196,7 +196,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               />
 
               {/* Supporting one-line plain-English description */}
-              <p className="text-sm sm:text-base text-black font-medium leading-relaxed">
+              <p className="text-sm sm:text-base text-text-body font-medium leading-relaxed">
                 Copay collected before the patient sees the provider.
               </p>
             </div>
@@ -254,7 +254,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
 
             {/* Top Row — Dominant Metric & Header */}
             <div className="relative z-10 flex flex-col items-start text-left space-y-2 pr-28 sm:pr-36 min-h-[110px] sm:min-h-[120px]">
-              <span className="text-xs font-bold font-heading text-black uppercase tracking-wider">
+              <span className="text-xs font-bold font-heading text-brand-navy uppercase tracking-wider">
                 AI CLAIMS PREP
               </span>
 
@@ -268,7 +268,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
               />
 
               {/* Supporting one-line plain-English description */}
-              <p className="text-sm sm:text-base text-black font-medium leading-relaxed">
+              <p className="text-sm sm:text-base text-text-body font-medium leading-relaxed">
                 Claims staged and ready before the visit ends.
               </p>
             </div>
@@ -296,7 +296,7 @@ export const WorkflowPillars: React.FC<WorkflowPillarsProps> = ({ onRequestDemo 
                 </div>
                 <div className="flex items-center justify-between text-[11px] text-text-body pt-1 border-t border-border-soft/60">
                   <span>Payer Rules: MetLife Verified</span>
-                  <span className="text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.2 rounded">
+                  <span className="text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
                     Queued for 1-Click Sign-Off
                   </span>
                 </div>

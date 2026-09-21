@@ -22,11 +22,11 @@ export const Header: React.FC<HeaderProps> = ({ onRequestDemo }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'Agents', href: '#agents' },
-    { name: 'Integrations', href: '#integrations' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Workflows', href: '#workflows' },
     { name: 'Compare', href: '#compare' },
+    { name: 'Integrations', href: '#integrations' },
+    { name: 'Architecture', href: '#architecture' },
+    { name: 'Security', href: '#security' },
     { name: 'FAQ', href: '#faq' },
   ];
 

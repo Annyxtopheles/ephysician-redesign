@@ -66,7 +66,7 @@ export const BeforeAfterComparison: React.FC = () => {
   ];
 
   return (
-    <section className="py-14 md:py-20 bg-surface-white">
+    <section id="compare" className="py-14 md:py-20 bg-surface-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
