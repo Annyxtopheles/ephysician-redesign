@@ -145,26 +145,8 @@ body {
   animation: ecgPulse 3.5s linear infinite;
 }
 
-/* Hero Healthcare Telemetry & Harmonic Wave Animations */
-@keyframes heroWaveFloat1 {
-  0%, 100% {
-    transform: translateY(0px) scaleY(1);
-  }
-  50% {
-    transform: translateY(-14px) scaleY(1.04);
-  }
-}
-
-@keyframes heroWaveFloat2 {
-  0%, 100% {
-    transform: translateY(0px) scaleY(1);
-  }
-  50% {
-    transform: translateY(16px) scaleY(0.96);
-  }
-}
-
-@keyframes heroTelemetryFlow {
+/* Voice Waveform Line Animation (Sarah AI Receptionist) */
+@keyframes voiceWavePulse {
   0% {
     stroke-dashoffset: 1600;
   }
@@ -173,42 +155,20 @@ body {
   }
 }
 
-@keyframes heroTelemetryReverse {
-  0% {
-    stroke-dashoffset: -1600;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+.animate-voice-wave {
+  stroke-dasharray: 800;
+  animation: voiceWavePulse 4.5s linear infinite;
 }
 
 @keyframes heroBiolumBreathe {
   0%, 100% {
-    opacity: 0.28;
+    opacity: 0.15;
     transform: scale(1);
   }
   50% {
-    opacity: 0.52;
-    transform: scale(1.14);
+    opacity: 0.28;
+    transform: scale(1.08);
   }
-}
-
-.animate-hero-wave-1 {
-  animation: heroWaveFloat1 9s ease-in-out infinite;
-}
-
-.animate-hero-wave-2 {
-  animation: heroWaveFloat2 12s ease-in-out infinite;
-}
-
-.animate-hero-telemetry-1 {
-  stroke-dasharray: 140 660;
-  animation: heroTelemetryFlow 8s linear infinite;
-}
-
-.animate-hero-telemetry-2 {
-  stroke-dasharray: 100 700;
-  animation: heroTelemetryReverse 10s linear infinite;
 }
 
 .animate-hero-biolum {
