@@ -113,7 +113,7 @@ export const WhyPracticesSwitch: React.FC = () => {
             <div className="mt-6 flex items-center justify-between text-[11px] font-bold text-brand-navy bg-surface-pale p-3 rounded-xl border border-border-soft">
               <span className="text-brand-blue">1. Forward</span>
               <ArrowRight className="w-3 h-3 text-border-soft shrink-0" />
-              <span className="text-brand-teal">2. Auth EHR</span>
+              <span className="text-brand-blue">2. Auth EHR</span>
               <ArrowRight className="w-3 h-3 text-border-soft shrink-0" />
               <span className="text-emerald-700">3. Sarah Live</span>
             </div>
@@ -156,10 +156,10 @@ export const WhyPracticesSwitch: React.FC = () => {
           <div className="bg-white rounded-2xl p-6 sm:p-8 border border-border-soft flex flex-col justify-between hover:border-brand-blue/40 hover:shadow-card-hover transition-all duration-200">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-7 h-7 rounded-lg bg-brand-teal text-white flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-bold font-heading uppercase tracking-wider text-brand-teal">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-brand-blue">
                   Healthcare Security
                 </span>
               </div>

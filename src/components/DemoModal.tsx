@@ -55,7 +55,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, initialEm
         {!submitted ? (
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-brand-teal border border-teal-200">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-brand-blue/10 text-brand-blue border border-brand-blue/20">
                 <Sparkles className="w-3 h-3" /> Live Demo
               </span>
               <span className="text-xs text-text-body/70">15-minute walkthrough</span>
@@ -174,7 +174,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, initialEm
 
               <div className="flex items-center justify-center gap-3 pt-2 text-[11px] text-text-body/70">
                 <span className="flex items-center gap-1 font-medium">
-                  <Shield className="w-3 h-3 text-brand-teal" /> HIPAA BAA Available
+                  <Shield className="w-3 h-3 text-brand-blue" /> HIPAA BAA Available
                 </span>
                 <span>•</span>
                 <span>No credit card required</span>
@@ -185,7 +185,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, initialEm
           </div>
         ) : (
           <div className="text-center py-6">
-            <div className="w-14 h-14 mx-auto rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mb-4">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-4">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold font-heading text-brand-navy">

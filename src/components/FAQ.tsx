@@ -15,7 +15,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       animate={isOpen ? 'open' : 'closed'}
       className={`rounded-2xl border transition-colors duration-200 overflow-hidden ${
         isOpen
-          ? 'bg-surface-pale border-brand-teal/50 shadow-sm'
+          ? 'bg-surface-pale border-brand-blue/40 shadow-sm'
           : 'bg-surface-white border-border-soft hover:border-brand-blue/30'
       }`}
     >
@@ -132,8 +132,11 @@ export const FAQ: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight">
-            FAQs
+          <span className="text-xs font-bold font-heading tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
+            Common Inquiries
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight mt-3">
+            Frequently Asked Questions
           </h2>
         </div>
 

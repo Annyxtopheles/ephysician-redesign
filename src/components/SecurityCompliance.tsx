@@ -21,7 +21,7 @@ export const SecurityCompliance: React.FC<SecurityComplianceProps> = ({ onReques
     {
       title: 'Multi-Tenant Database Isolation',
       spec: 'PostgreSQL Row-Level Security',
-      icon: <Server className="w-4 h-4 text-brand-teal" />,
+      icon: <Server className="w-4 h-4 text-brand-blue" />,
       detail: 'Enforced at the database engine layer. One clinic’s staff, bots, and queries can never access another clinic’s data.',
       specs: [
         { label: 'Isolation', value: 'Hardware & Row-Level Tenant Boundary' },
@@ -48,7 +48,7 @@ export const SecurityCompliance: React.FC<SecurityComplianceProps> = ({ onReques
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold font-heading tracking-widest text-brand-teal uppercase bg-brand-teal/10 px-3 py-1 rounded-full border border-brand-teal/20">
+          <span className="text-xs font-bold font-heading tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
             Enterprise Security
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-brand-navy tracking-tight text-balance mt-3">
@@ -64,7 +64,7 @@ export const SecurityCompliance: React.FC<SecurityComplianceProps> = ({ onReques
           {securityPillars.map((pillar, idx) => (
             <div
               key={idx}
-              className="bg-[#EFFAFB]/60 rounded-2xl border border-border-soft p-6 sm:p-7 hover:border-brand-teal/50 hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between"
+              className="bg-[#EFFAFB]/60 rounded-2xl border border-border-soft p-6 sm:p-7 hover:border-brand-blue/40 hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between"
             >
               <div>
                 {/* Header */}
@@ -102,10 +102,10 @@ export const SecurityCompliance: React.FC<SecurityComplianceProps> = ({ onReques
         </div>
 
         {/* Bottom Security Guarantee Ribbon */}
-        <div className="mt-10 sm:mt-12 bg-white rounded-2xl p-5 sm:p-6 border border-brand-teal/30 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 sm:mt-12 bg-white rounded-2xl p-5 sm:p-6 border border-border-soft shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5 text-left">
-            <div className="w-9 h-9 rounded-xl bg-brand-teal/10 text-brand-teal flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-5 h-5 text-brand-teal" />
+            <div className="w-9 h-9 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5 text-brand-blue" />
             </div>
             <div>
               <div className="text-sm sm:text-base font-bold font-heading text-brand-navy">
