@@ -54,16 +54,16 @@ export const TrustBar: React.FC = () => {
     {
       node: (
         <div className="flex items-center justify-center px-4 select-none">
-          <img src={nexhealthLogo} alt="NexHealth" className="h-7 sm:h-8 w-auto max-w-[140px] object-contain" />
+          <img src={nexhealthLogo} alt="NexHealth" className="h-10 sm:h-12 w-auto max-w-[170px] object-contain" />
         </div>
       ),
       title: 'NexHealth',
     },
     {
       node: (
-        <div className="flex items-center justify-center gap-2 px-4 select-none">
-          <img src={curveDentalLogo} alt="Curve Dental" className="h-4 w-4 object-contain" />
-          <span className="text-sm font-bold text-[#1A2B3D] tracking-tight whitespace-nowrap">Curve Dental</span>
+        <div className="flex items-center justify-center gap-2.5 px-4 select-none">
+          <img src={curveDentalLogo} alt="Curve Dental" className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
+          <span className="text-lg sm:text-xl font-extrabold text-[#1A2B3D] tracking-tight whitespace-nowrap">Curve Dental</span>
         </div>
       ),
       title: 'Curve Dental',
