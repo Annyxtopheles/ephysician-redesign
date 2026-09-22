@@ -54,7 +54,7 @@ export const TrustBar: React.FC = () => {
     {
       node: (
         <div className="flex items-center justify-center px-4 select-none">
-          <img src={nexhealthLogo} alt="NexHealth" className="h-10 sm:h-12 w-auto max-w-[170px] object-contain" />
+          <img src={nexhealthLogo} alt="NexHealth" className="h-7 sm:h-8 w-auto max-w-[210px] object-contain" />
         </div>
       ),
       title: 'NexHealth',

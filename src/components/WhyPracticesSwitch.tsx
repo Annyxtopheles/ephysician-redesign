@@ -11,7 +11,7 @@ import ecwLogo from '../assets/systems/EClinicalWorks_idCA4_zeW0_0.svg';
 export const WhyPracticesSwitch: React.FC = () => {
   const ehrIntegrations = [
     { name: 'Open Dental', logo: openDentalLogo, className: 'h-3.5 sm:h-4 w-auto max-w-[95px]' },
-    { name: 'NexHealth', logo: nexhealthLogo, className: 'h-5.5 sm:h-6 w-auto max-w-[105px]' },
+    { name: 'NexHealth', logo: nexhealthLogo, className: 'h-4 sm:h-4.5 w-auto max-w-[100px]' },
     { name: 'Eaglesoft', logo: eaglesoftLogo, className: 'h-3.5 sm:h-4 w-auto max-w-[90px]' },
     { name: 'Dentrix', logo: dentrixLogo, className: 'h-3 sm:h-3.5 w-auto max-w-[85px]' },
     { name: 'eClinicalWorks', logo: ecwLogo, className: 'h-3 sm:h-3.5 w-auto max-w-[105px]' },
