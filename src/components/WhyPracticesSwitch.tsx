@@ -1,7 +1,22 @@
 import React from 'react';
 import { Database, DollarSign, Zap, Sliders, ShieldCheck, ArrowRight, Check } from 'lucide-react';
 
+// Import official EHR & PMS SVGs for Direct Sync dock
+import openDentalLogo from '../assets/systems/opendental logo.svg';
+import nexhealthLogo from '../assets/systems/nexhealth-dark.svg';
+import eaglesoftLogo from '../assets/systems/eaglesoft logo.svg';
+import dentrixLogo from '../assets/systems/Henry_Schein_One_idgM28iBol_1.svg';
+import ecwLogo from '../assets/systems/EClinicalWorks_idCA4_zeW0_0.svg';
+
 export const WhyPracticesSwitch: React.FC = () => {
+  const ehrIntegrations = [
+    { name: 'Open Dental', logo: openDentalLogo, className: 'h-3.5 sm:h-4 w-auto max-w-[95px]' },
+    { name: 'NexHealth', logo: nexhealthLogo, className: 'h-4.5 sm:h-5 w-auto max-w-[90px]' },
+    { name: 'Eaglesoft', logo: eaglesoftLogo, className: 'h-3.5 sm:h-4 w-auto max-w-[90px]' },
+    { name: 'Dentrix', logo: dentrixLogo, className: 'h-3 sm:h-3.5 w-auto max-w-[85px]' },
+    { name: 'eClinicalWorks', logo: ecwLogo, className: 'h-3 sm:h-3.5 w-auto max-w-[105px]' },
+  ];
+
   return (
     <section id="architecture" className="py-14 md:py-20 bg-surface-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,14 +60,19 @@ export const WhyPracticesSwitch: React.FC = () => {
             <div className="mt-6 pt-5 border-t border-border-soft/80">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <span className="text-xs font-semibold text-text-body/70 mr-1">Direct Sync:</span>
-                {['OpenDental', 'NexHealth', 'Eaglesoft', 'Dentrix', 'eClinicalWorks'].map((ehr, i) => (
-                  <span
+                {ehrIntegrations.map((ehr, i) => (
+                  <div
                     key={i}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white border border-border-soft text-xs font-bold font-heading text-brand-navy shadow-2xs"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-border-soft shadow-2xs hover:border-brand-blue/30 transition-all h-8 sm:h-9"
+                    title={ehr.name}
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    {ehr}
-                  </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                    <img
+                      src={ehr.logo}
+                      alt={ehr.name}
+                      className={`${ehr.className} object-contain`}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
