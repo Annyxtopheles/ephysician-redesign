@@ -54,7 +54,7 @@ export const TrustBar: React.FC = () => {
     {
       node: (
         <div className="flex items-center justify-center px-4 select-none">
-          <img src={nexhealthLogo} alt="NexHealth" className="h-7 sm:h-8 w-auto max-w-[210px] object-contain" />
+          <img src={nexhealthLogo} alt="NexHealth" className="h-4.5 sm:h-5 w-auto max-w-[130px] object-contain" />
         </div>
       ),
       title: 'NexHealth',
@@ -106,8 +106,9 @@ export const TrustBar: React.FC = () => {
     },
     {
       node: (
-        <div className="flex items-center justify-center px-4 select-none">
+        <div className="flex items-center justify-center gap-2 px-4 select-none">
           <img src={googleCalendarLogo} alt="Google Calendar" className="h-5 w-5 sm:h-5.5 sm:w-5.5 object-contain" />
+          <span className="text-base sm:text-lg font-bold text-[#3c4043] tracking-tight whitespace-nowrap">Calendar</span>
         </div>
       ),
       title: 'Google Calendar',
