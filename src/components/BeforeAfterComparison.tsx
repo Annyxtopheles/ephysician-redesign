@@ -1,5 +1,7 @@
 import React from 'react';
 import { Clock } from 'lucide-react';
+import { motion, type Variants } from 'motion/react';
+
 
 export const BeforeAfterComparison: React.FC = () => {
   const milestones = [
@@ -65,12 +67,58 @@ export const BeforeAfterComparison: React.FC = () => {
     },
   ];
 
+  // Motion variants for responsive scroll reveal
+  const cardVariantsLeft: Variants = {
+    hidden: { opacity: 0, x: -20, y: 16 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.55,
+        ease: [0.22, 1, 0.36, 1] as const,
+      },
+    },
+  };
+
+  const cardVariantsRight: Variants = {
+    hidden: { opacity: 0, x: 20, y: 16 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.55,
+        ease: [0.22, 1, 0.36, 1] as const,
+        delay: 0.08,
+      },
+    },
+  };
+
+  const badgeVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.45,
+        ease: [0.22, 1, 0.36, 1] as const,
+      },
+    },
+  };
+
   return (
-    <section id="compare" className="py-14 md:py-20 bg-surface-white">
+    <section id="compare" className="py-14 md:py-20 bg-surface-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
+        >
           <span className="text-xs font-bold font-heading tracking-widest text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
             A Day in the Life
           </span>
@@ -80,10 +128,16 @@ export const BeforeAfterComparison: React.FC = () => {
           <p className="mt-3 text-sm sm:text-base text-text-body max-w-2xl mx-auto">
             From the opening shift bell to end-of-day billing, see how autonomous workflows eliminate front-desk burnout.
           </p>
-        </div>
+        </motion.div>
 
         {/* Track Column Labels (Desktop) */}
-        <div className="hidden lg:grid grid-cols-12 gap-8 mb-6 text-xs font-bold font-heading uppercase tracking-wider">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="hidden lg:grid grid-cols-12 gap-8 mb-6 text-xs font-bold font-heading uppercase tracking-wider"
+        >
           <div className="col-span-5 text-rose-800/80 pl-2 flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
             Without ePhysician (The Backlog Trap)
@@ -95,26 +149,39 @@ export const BeforeAfterComparison: React.FC = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
             With ePhysician (The Autonomous Clinic)
           </div>
-        </div>
+        </motion.div>
 
         {/* Connected Shift Timeline */}
         <div className="relative space-y-8 lg:space-y-10">
-          {/* Vertical Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-border-soft -z-0"></div>
+          {/* Vertical Connecting Line with gentle gradient (Desktop) */}
+          <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-rose-200/80 via-brand-blue/25 to-emerald-200/80 -z-0"></div>
 
           {milestones.map((item, idx) => (
-            <div key={idx} className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
+            <motion.div
+              key={idx}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25, margin: "0px 0px -40px 0px" }}
+              className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center"
+            >
               
               {/* Center Timeline Badge (First on mobile, center on desktop) */}
-              <div className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center">
+              <motion.div
+                variants={badgeVariants}
+                className="order-1 lg:order-2 lg:col-span-2 flex flex-col items-center justify-center"
+              >
                 <div className="bg-white rounded-full px-3.5 py-1.5 border-2 border-brand-blue/30 shadow-xs flex items-center gap-1.5 text-xs font-bold font-heading text-brand-navy shrink-0">
                   <Clock className="w-3.5 h-3.5 text-brand-blue" />
                   <span>{item.time}</span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Left Column: Without ePhysician */}
-              <div className="order-2 lg:order-1 lg:col-span-5 bg-[#FFF7F7] rounded-2xl p-5 sm:p-6 border border-rose-200/80 shadow-xs flex flex-col justify-between h-full">
+              <motion.div
+                variants={cardVariantsLeft}
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                className="order-2 lg:order-1 lg:col-span-5 bg-[#FFF7F7] rounded-2xl p-5 sm:p-6 border border-rose-200/80 shadow-xs flex flex-col justify-between h-full hover:border-rose-300 transition-colors"
+              >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded">
@@ -131,10 +198,14 @@ export const BeforeAfterComparison: React.FC = () => {
                     {item.without.impact}
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Right Column: With ePhysician */}
-              <div className="order-3 lg:order-3 lg:col-span-5 bg-[#F0FDF8] rounded-2xl p-5 sm:p-6 border border-emerald-200/90 shadow-xs flex flex-col justify-between h-full">
+              <motion.div
+                variants={cardVariantsRight}
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                className="order-3 lg:order-3 lg:col-span-5 bg-[#F0FDF8] rounded-2xl p-5 sm:p-6 border border-emerald-200/90 shadow-xs flex flex-col justify-between h-full hover:border-emerald-300 transition-colors"
+              >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
@@ -151,14 +222,20 @@ export const BeforeAfterComparison: React.FC = () => {
                     {item.with.impact}
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Quantified Clinic Shift Impact Summary Bar */}
-        <div className="mt-12 sm:mt-16 bg-[#EFFAFB] rounded-2xl p-6 sm:p-8 border border-border-soft">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-12 sm:mt-16 bg-[#EFFAFB] rounded-2xl p-6 sm:p-8 border border-border-soft"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-border-soft">
             <div className="pt-2 sm:pt-0">
               <div className="text-2xl sm:text-3xl font-extrabold font-heading text-brand-navy">
@@ -187,9 +264,10 @@ export const BeforeAfterComparison: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
   );
 };
+
