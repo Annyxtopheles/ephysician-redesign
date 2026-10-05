@@ -45,35 +45,35 @@ export const WhyPracticesSwitch: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* Bento Card 1: Works Alongside Your EHR (Spans 2 cols on desktop) */}
-          <div className="md:col-span-2 relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[300px] sm:min-h-[340px] flex flex-col justify-between p-6 sm:p-8 bg-[#f8fcfd]">
+          <div className="md:col-span-2 relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[320px] sm:min-h-[350px] flex flex-col justify-between p-6 sm:p-9 bg-white">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bentoEhrLaptop}
                 alt="Clinic EHR on laptop"
-                className="w-full h-full object-cover object-right-bottom transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-[80%_center] sm:object-right transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* Light Protective Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/40 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/80 sm:to-transparent" />
+              {/* High-Contrast Left Shield Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/20 sm:via-white/95 sm:via-[45%] sm:to-transparent" />
             </div>
 
-            {/* Content Layer */}
-            <div className="relative z-10 max-w-md lg:max-w-lg">
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-brand-navy tracking-tight leading-tight">
-                Works alongside your existing EHR &amp; PMS
+            {/* Content Layer (Anchored to Left) */}
+            <div className="relative z-10 max-w-sm sm:max-w-md">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-brand-navy tracking-tight leading-tight">
+                Works alongside your<br />existing EHR &amp; PMS
               </h3>
-              <p className="mt-2.5 text-sm sm:text-base text-text-body leading-relaxed">
+              <p className="mt-3 text-sm sm:text-base text-text-body font-medium leading-relaxed max-w-sm sm:max-w-md">
                 ePhysician is a non-invasive layer on top of your practice management database. Appointments, patient records, and insurance verifications sync bi-directionally in real time.
               </p>
             </div>
 
             {/* Micro-Visual: EHR Connector Dock */}
-            <div className="relative z-10 mt-6 pt-5">
+            <div className="relative z-10 mt-8 pt-2">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 {ehrIntegrations.map((ehr, i) => (
                   <div
                     key={i}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-xs border border-border-soft/90 shadow-2xs hover:border-brand-blue/30 transition-all h-8 sm:h-9"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-border-soft/90 shadow-2xs hover:border-brand-blue/30 transition-all h-8 sm:h-9"
                     title={ehr.name}
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
@@ -89,31 +89,31 @@ export const WhyPracticesSwitch: React.FC = () => {
           </div>
 
           {/* Bento Card 2: Fair Usage-Based Pricing */}
-          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[300px] sm:min-h-[340px] flex flex-col justify-between p-6 sm:p-8 bg-[#faf8f5]">
+          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[320px] sm:min-h-[350px] flex flex-col justify-between p-6 sm:p-8 bg-white">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bentoPricingDesk}
                 alt="Minimalist clinic desk flatlay"
-                className="w-full h-full object-cover object-right-top transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-[85%_center] transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* Light Protective Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/30 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/80 sm:to-transparent" />
+              {/* High-Contrast Left Shield Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/20 sm:via-white/95 sm:via-[50%] sm:to-transparent" />
             </div>
 
-            {/* Content Layer */}
-            <div className="relative z-10">
+            {/* Content Layer (Constrained to Left to avoid notebook collision) */}
+            <div className="relative z-10 max-w-[260px] sm:max-w-[280px]">
               <h3 className="text-xl sm:text-2xl font-bold font-heading text-brand-navy tracking-tight leading-snug">
-                Pay only for what you use
+                Pay only for<br />what you use
               </h3>
-              <p className="mt-2.5 text-xs sm:text-sm text-text-body leading-relaxed">
+              <p className="mt-2.5 text-xs sm:text-sm text-text-body font-medium leading-relaxed">
                 No bloated vendor contracts. Pay proportional to your actual answered call and reminder volume.
               </p>
             </div>
 
             {/* Micro-Visual: Pricing Comparison Pill */}
             <div className="relative z-10 mt-6">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs border border-emerald-300/80 shadow-xs text-xs font-semibold text-emerald-800">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-emerald-300 shadow-xs text-xs font-semibold text-emerald-800">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
                 <span>ePhysician Model</span>
                 <span className="text-text-body/30">·</span>
@@ -125,31 +125,31 @@ export const WhyPracticesSwitch: React.FC = () => {
           </div>
 
           {/* Bento Card 3: Live in Under 24 Hours */}
-          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[280px] sm:min-h-[310px] flex flex-col justify-between p-6 sm:p-8 bg-[#f7fafc]">
+          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[290px] sm:min-h-[320px] flex flex-col justify-between p-6 sm:p-8 bg-white">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bentoSpeedPhone}
                 alt="Clinic reception VoIP phone"
-                className="w-full h-full object-cover object-right-bottom transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-[85%_center] sm:object-right transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* Light Protective Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/40 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/75 sm:to-transparent" />
+              {/* High-Contrast Left Shield Gradient (masks background wall text) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30 sm:via-white/95 sm:via-[52%] sm:to-transparent" />
             </div>
 
-            {/* Content Layer */}
-            <div className="relative z-10">
+            {/* Content Layer (Constrained to Left to avoid wall text & phone) */}
+            <div className="relative z-10 max-w-[250px] sm:max-w-[270px]">
               <h3 className="text-lg sm:text-xl font-bold font-heading text-brand-navy tracking-tight leading-snug">
-                Live in under 24 hours
+                Live in under<br />24 hours
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-text-body leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm text-text-body font-medium leading-relaxed">
                 Keep your existing clinic telephone number. Point forwarding to Sarah, and start handling live calls today.
               </p>
             </div>
 
             {/* Micro-Visual: 3-Step Pipeline */}
             <div className="relative z-10 mt-6">
-              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-xs border border-border-soft shadow-2xs text-xs font-bold text-brand-navy">
+              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-border-soft shadow-2xs text-xs font-bold text-brand-navy">
                 <span className="flex items-center gap-1.5 text-brand-blue">
                   <span className="w-4 h-4 rounded-full bg-brand-blue text-white text-[10px] flex items-center justify-center font-bold">1</span>
                   Forward
@@ -169,68 +169,68 @@ export const WhyPracticesSwitch: React.FC = () => {
           </div>
 
           {/* Bento Card 4: Staff Customize Voice & Rules */}
-          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[280px] sm:min-h-[310px] flex flex-col justify-between p-6 sm:p-8 bg-[#fdfbf9]">
+          <div className="relative overflow-hidden rounded-3xl border border-border-soft shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[290px] sm:min-h-[320px] flex flex-col justify-between p-6 sm:p-8 bg-white">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bentoCustomRules}
                 alt="Clinic desk with wireless keyboard"
-                className="w-full h-full object-cover object-right-bottom transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-[85%_center] sm:object-right transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* Light Protective Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/40 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/75 sm:to-transparent" />
+              {/* High-Contrast Left Shield Gradient (masks monitor screen text) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30 sm:via-white/95 sm:via-[52%] sm:to-transparent" />
             </div>
 
-            {/* Content Layer */}
-            <div className="relative z-10">
+            {/* Content Layer (Constrained to Left to avoid monitor) */}
+            <div className="relative z-10 max-w-[250px] sm:max-w-[280px]">
               <h3 className="text-lg sm:text-xl font-bold font-heading text-brand-navy tracking-tight leading-snug">
-                Staff customize voice &amp; rules
+                Staff customize<br />voice &amp; rules
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-text-body leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm text-text-body font-medium leading-relaxed">
                 Adjust scheduling rules, booking windows, triage logic, and clinical guidelines without waiting on IT tickets.
               </p>
             </div>
 
             {/* Micro-Visual: Protocol Pills */}
-            <div className="relative z-10 mt-6 flex flex-wrap gap-1.5">
-              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-xs text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
+            <div className="relative z-10 mt-6 flex flex-wrap gap-1.5 max-w-[280px]">
+              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-md text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
                 Tone: Warm &amp; Empathetic
               </span>
-              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-xs text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
+              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-md text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
                 English / Spanish
               </span>
-              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-xs text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
+              <span className="text-[11px] font-semibold bg-white/95 backdrop-blur-md text-brand-navy px-2.5 py-1 rounded-lg border border-border-soft shadow-2xs">
                 Emergency Triage
               </span>
             </div>
           </div>
 
           {/* Bento Card 5: Enterprise Compliance */}
-          <div className="relative overflow-hidden rounded-3xl border border-slate-800 shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[280px] sm:min-h-[310px] flex flex-col justify-between p-6 sm:p-8 bg-[#0a1622]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-800 shadow-xs group transition-all duration-300 hover:shadow-card-hover min-h-[290px] sm:min-h-[320px] flex flex-col justify-between p-6 sm:p-8 bg-[#07111b]">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
                 src={bentoSecurityHipaa}
                 alt="Medical stethoscope with cyan rim lighting"
-                className="w-full h-full object-cover object-right-bottom transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-[85%_center] sm:object-right transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              {/* Dark Protective Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1622]/95 via-[#0a1622]/75 to-[#0a1622]/40 sm:bg-gradient-to-r sm:from-[#0a1622]/95 sm:via-[#0a1622]/70 sm:to-transparent" />
+              {/* Deep Midnight Navy Shield Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07111b] via-[#07111b]/95 to-[#07111b]/30 sm:via-[#07111b]/95 sm:via-[52%] sm:to-transparent" />
             </div>
 
-            {/* Content Layer */}
-            <div className="relative z-10">
+            {/* Content Layer (Crisp White on Deep Navy) */}
+            <div className="relative z-10 max-w-[260px] sm:max-w-[290px]">
               <h3 className="text-lg sm:text-xl font-bold font-heading text-white tracking-tight leading-snug">
-                Zero patient data used for AI training
+                Zero patient data<br />used for AI training
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
+              <p className="mt-2 text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">
                 Full HIPAA Business Associate Agreement (BAA) executed on day one. Your clinical records remain 100% private.
               </p>
             </div>
 
             {/* Micro-Visual: Compliance Guarantee Pill */}
             <div className="relative z-10 mt-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-xs text-xs font-semibold text-white">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xs text-xs font-semibold text-white">
                 <span className="flex items-center gap-1.5 text-emerald-400">
                   <Check className="w-3.5 h-3.5" /> BAA Ready Immediately
                 </span>
